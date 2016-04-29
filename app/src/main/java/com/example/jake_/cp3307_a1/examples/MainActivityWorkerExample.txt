@@ -1,0 +1,38 @@
+package com.example.cpjjh.threaddemo;
+
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Handler handler;
+
+    private Worker worker;
+
+    public MainActivity() {
+        worker = new Worker(this);
+        worker.start();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        handler = new Handler();
+
+        ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
+
+        try {
+            Log.i("MainActivity", "trying to load...");
+            //imageView1.setImageResource(R.drawable.train1);
+            worker.loadResource(imageView1, R.drawable.train3, handler);
+        } catch (NullPointerException e) {
+            Log.e("MainActivity", "bugger..." + e.toString());
+        }
+
+    }
+}
