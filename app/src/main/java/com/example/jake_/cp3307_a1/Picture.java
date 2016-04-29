@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+//make this work as a worker thread
 public class Picture  {
 
     private Bitmap topLeft;
