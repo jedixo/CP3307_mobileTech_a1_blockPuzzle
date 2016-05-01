@@ -1,19 +1,25 @@
 package com.example.jake_.cp3307_a1;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    boolean firstStart = true;
+    private PictureWorker worker;
+
+    public MainActivity() {
+        worker = new PictureWorker(this);
+        worker.start();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,23 +27,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Picture pic = new Picture(getResources(),R.drawable.test);
-        ImageView img = (ImageView) findViewById(R.id.topLeft);
-        img.setImageBitmap(pic.getTopLeft());
-        img = (ImageView) findViewById(R.id.topRight);
-        img.setImageBitmap(pic.getTopRight());
-        img = (ImageView) findViewById(R.id.bottomLeft);
-        img.setImageBitmap(pic.getBottomLeft());
-        img = (ImageView) findViewById(R.id.bottomRight);
-        img.setImageBitmap(pic.getBottomRight());
 
+        Handler handler = new Handler();
 
+        try {
+            ImageView img = (ImageView) findViewById(R.id.topLeft);
+            worker.loadResource(img, 1, R.drawable.test, handler);
+            img = (ImageView) findViewById(R.id.topRight);
+            worker.loadResource(img, 2, R.drawable.test, handler);
+            img = (ImageView) findViewById(R.id.bottomLeft);
+            worker.loadResource(img, 3, R.drawable.test, handler);
+            img = (ImageView) findViewById(R.id.bottomRight);
+            worker.loadResource(img, 4, R.drawable.test, handler);
+        } catch (Exception e) {
+            Log.e("MainActivity", e.toString());
+        }
 
 
     }
-
 
 
     @Override
@@ -64,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
         System.out.println("test");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        this.finish();
+        Runtime.getRuntime().gc();
     }
 
 }
