@@ -11,8 +11,12 @@ import android.widget.ImageView;
 
 public class PictureWorker extends Thread {
 
+
+    private PictureSingletonStorageClass pictureSingletonStorageClass = PictureSingletonStorageClass.getInstance();
+
     private Handler handler;
     private Context context;
+    private Looper looper;
 
     public PictureWorker(Context context) {
         this.context = context;
@@ -49,35 +53,31 @@ public class PictureWorker extends Thread {
     @Override
     public void run() {
         Looper.prepare();
-        Looper looper = Looper.myLooper();
+        looper = Looper.myLooper();
         handler = new Handler(looper);
-
         Looper.loop();
     }
 
-    public void loadResource(final ImageView imageView, final int position, final int id, final Handler runner) {
+
+    public void quit() {
+      looper.quit();
+    }
+
+    public void loadResource(final int id, final Handler runner) {
         handler.post(new Runnable() {
             @Override
             public void run() {
                 final Bitmap original = decodeSampledBitmapFromResource(context.getResources(), id, 300, 300);
-                final Bitmap bitmap;
-                //old code needs improving
-                if (position == 1) {
-                    bitmap = Bitmap.createBitmap(original, 0, 0, original.getWidth() / 2, original.getHeight() / 2);
-                } else if (position == 2) {
-                    bitmap = Bitmap.createBitmap(original, original.getWidth() / 2, 0, original.getWidth() / 2, original.getHeight() / 2);
-                } else if (position == 3) {
-                    bitmap = Bitmap.createBitmap(original, 0, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2);
-                } else if (position == 4) {
-                    bitmap = Bitmap.createBitmap(original, original.getWidth() / 2, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2);
-                } else {
-                    bitmap = original;
-                }
+                    pictureSingletonStorageClass.AddBitmap(1, Bitmap.createBitmap(original, 0, 0, original.getWidth() / 2, original.getHeight() / 2));
+                    pictureSingletonStorageClass.AddBitmap(2, Bitmap.createBitmap(original, original.getWidth() / 2, 0, original.getWidth() / 2, original.getHeight() / 2));
+                    pictureSingletonStorageClass.AddBitmap(3, Bitmap.createBitmap(original, 0, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
+                    pictureSingletonStorageClass.AddBitmap(4, Bitmap.createBitmap(original, original.getWidth() / 2, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
+
 
                 runner.post(new Runnable() {
                     @Override
                     public void run() {
-                        imageView.setImageBitmap(bitmap);
+                       pictureSingletonStorageClass.setInitialBitmaps();
                     }
                 });
             }

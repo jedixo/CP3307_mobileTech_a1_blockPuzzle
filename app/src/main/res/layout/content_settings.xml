@@ -17,7 +17,16 @@
         android:layout_height="wrap_content"
         android:text="Done"
         android:id="@+id/Done"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="DonePressed" />
+        android:onClick="DonePressed"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/Done"
+        android:layout_alignParentTop="true" />
 </RelativeLayout>

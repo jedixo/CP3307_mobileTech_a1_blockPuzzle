@@ -2,7 +2,6 @@ package com.example.jake_.cp3307_a1;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -14,9 +13,11 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private PictureWorker worker;
+    private PictureSingletonStorageClass pictureSingletonStorageClass = PictureSingletonStorageClass.getInstance();
 
     public MainActivity() {
         worker = new PictureWorker(this);
+        pictureSingletonStorageClass.setPictureWorker(worker);
         worker.start();
     }
 
@@ -34,16 +35,16 @@ public class MainActivity extends AppCompatActivity {
         Handler handler = new Handler();
 
         try {
-            ImageView img = (ImageView) findViewById(R.id.topLeft);
-            worker.loadResource(img, 1, R.drawable.test, handler);
-            img = (ImageView) findViewById(R.id.topRight);
-            worker.loadResource(img, 2, R.drawable.test, handler);
-            img = (ImageView) findViewById(R.id.bottomLeft);
-            worker.loadResource(img, 3, R.drawable.test, handler);
-            img = (ImageView) findViewById(R.id.bottomRight);
-            worker.loadResource(img, 4, R.drawable.test, handler);
+            //ImageView img = (ImageView) findViewById(R.id.topLeft);
+            pictureSingletonStorageClass.setImageViews(1,(ImageView) findViewById(R.id.topLeft));
+            pictureSingletonStorageClass.setImageViews(2,(ImageView) findViewById(R.id.topRight));
+            pictureSingletonStorageClass.setImageViews(3,(ImageView) findViewById(R.id.bottomLeft));
+            pictureSingletonStorageClass.setImageViews(4,(ImageView) findViewById(R.id.bottomRight));
+
+            worker.loadResource(R.drawable.a1, handler);
+            worker.loadResource(R.drawable.a2, handler);
         } catch (Exception e) {
-            Log.e("MainActivity", e.toString());
+            Log.e("MainActivity", e.toString()  + "test");
         }
 
 
@@ -74,11 +75,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
         System.out.println("test");
+        pictureSingletonStorageClass.next();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        worker.quit();
 
         this.finish();
         Runtime.getRuntime().gc();
