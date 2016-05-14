@@ -8,7 +8,7 @@ import android.view.View;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private PictureSingletonStorageClass pictureSingletonStorageClass = PictureSingletonStorageClass.getInstance();
+    private ImageViewController imageViewController = ImageViewController.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class SettingsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        pictureSingletonStorageClass.clearBitmaps();
+        imageViewController.clearBitmaps();
     }
 
     public void DonePressed(View view) {

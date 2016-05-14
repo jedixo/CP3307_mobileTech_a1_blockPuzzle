@@ -6,13 +6,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.ImageView;
 
 
 public class PictureWorker extends Thread {
 
 
-    private PictureSingletonStorageClass pictureSingletonStorageClass = PictureSingletonStorageClass.getInstance();
+    private ImageViewController imageViewController = ImageViewController.getInstance();
 
     private Handler handler;
     private Context context;
@@ -68,16 +67,18 @@ public class PictureWorker extends Thread {
             @Override
             public void run() {
                 final Bitmap original = decodeSampledBitmapFromResource(context.getResources(), id, 300, 300);
-                    pictureSingletonStorageClass.AddBitmap(1, Bitmap.createBitmap(original, 0, 0, original.getWidth() / 2, original.getHeight() / 2));
-                    pictureSingletonStorageClass.AddBitmap(2, Bitmap.createBitmap(original, original.getWidth() / 2, 0, original.getWidth() / 2, original.getHeight() / 2));
-                    pictureSingletonStorageClass.AddBitmap(3, Bitmap.createBitmap(original, 0, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
-                    pictureSingletonStorageClass.AddBitmap(4, Bitmap.createBitmap(original, original.getWidth() / 2, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
+                    imageViewController.AddBitmap(0, decodeSampledBitmapFromResource(context.getResources(), id, 50, 60));
+                    imageViewController.AddBitmap(1, Bitmap.createBitmap(original, 0, 0, original.getWidth() / 2, original.getHeight() / 2));
+                    imageViewController.AddBitmap(2, Bitmap.createBitmap(original, original.getWidth() / 2, 0, original.getWidth() / 2, original.getHeight() / 2));
+                    imageViewController.AddBitmap(3, Bitmap.createBitmap(original, 0, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
+                    imageViewController.AddBitmap(4, Bitmap.createBitmap(original, original.getWidth() / 2, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
 
 
                 runner.post(new Runnable() {
                     @Override
                     public void run() {
-                       pictureSingletonStorageClass.setInitialBitmaps();
+                        System.out.println("1");
+                       imageViewController.setInitialBitmaps();
                     }
                 });
             }

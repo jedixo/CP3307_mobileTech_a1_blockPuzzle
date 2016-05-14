@@ -25,7 +25,8 @@
             android:layout_weight="1"
             android:scaleType="fitXY"
             android:padding="1dp"
-            android:contextClickable="false" />
+            android:contextClickable="false"
+            android:onClick="nextImage" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -34,7 +35,8 @@
             android:layout_weight="1"
             android:scaleType="fitXY"
             android:padding="1dp"
-            android:cropToPadding="false" />
+            android:cropToPadding="false"
+            android:onClick="nextImage" />
     </LinearLayout>
 
     <LinearLayout
@@ -50,7 +52,8 @@
             android:id="@+id/bottomLeft"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:padding="1dp" />
+            android:padding="1dp"
+            android:onClick="nextImage" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -58,7 +61,7 @@
             android:id="@+id/bottomRight"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:onClick="click"
+            android:onClick="nextImage"
             android:padding="1dp" />
 
     </LinearLayout>
@@ -74,7 +77,14 @@
             android:layout_height="match_parent"
             android:text="New Button"
             android:onClick="click"
-            android:id="@+id/button" />
+            android:id="@+id/button"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/preview"
+            android:layout_weight="2.5" />
     </LinearLayout>
 
 </LinearLayout>
