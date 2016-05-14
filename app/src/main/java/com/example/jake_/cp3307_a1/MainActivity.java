@@ -13,11 +13,9 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private PictureWorker worker;
-    private PictureSingletonStorageClass pictureSingletonStorageClass = PictureSingletonStorageClass.getInstance();
 
     public MainActivity() {
         worker = new PictureWorker(this);
-        pictureSingletonStorageClass.setPictureWorker(worker);
         worker.start();
     }
 
@@ -34,18 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         Handler handler = new Handler();
 
-        try {
-            //ImageView img = (ImageView) findViewById(R.id.topLeft);
-            pictureSingletonStorageClass.setImageViews(1,(ImageView) findViewById(R.id.topLeft));
-            pictureSingletonStorageClass.setImageViews(2,(ImageView) findViewById(R.id.topRight));
-            pictureSingletonStorageClass.setImageViews(3,(ImageView) findViewById(R.id.bottomLeft));
-            pictureSingletonStorageClass.setImageViews(4,(ImageView) findViewById(R.id.bottomRight));
+            ImageViewController.setImageViews(0,(ImageView) findViewById(R.id.preview));
+            ImageViewController.setImageViews(1,(ImageView) findViewById(R.id.topLeft));
+            ImageViewController.setImageViews(2,(ImageView) findViewById(R.id.topRight));
+            ImageViewController.setImageViews(3,(ImageView) findViewById(R.id.bottomLeft));
+            ImageViewController.setImageViews(4,(ImageView) findViewById(R.id.bottomRight));
 
             worker.loadResource(R.drawable.a1, handler);
             worker.loadResource(R.drawable.a2, handler);
-        } catch (Exception e) {
-            Log.e("MainActivity", e.toString()  + "test");
-        }
 
 
     }
@@ -75,7 +69,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
         System.out.println("test");
-        pictureSingletonStorageClass.next();
+        ImageViewController.randomiseImages();
+    }
+
+    public void nextImage(View view) {
+        switch(view.getId()) {
+            case R.id.topLeft:
+                ImageViewController.nextImage(1);
+                break;
+            case R.id.topRight:
+                ImageViewController.nextImage(2);
+                break;
+            case R.id.bottomLeft:
+                ImageViewController.nextImage(3);
+                break;
+            case R.id.bottomRight:
+                ImageViewController.nextImage(4);
+                break;
+        }
+
+        if (ImageViewController.isComplete()) {
+            System.out.println("complete");
+        }
+
     }
 
     @Override
