@@ -16,6 +16,8 @@ public class PictureWorker extends Thread {
     private Handler handler;
     private Context context;
     private Looper looper;
+    public int totalImages = 0;
+    private int loaded = 0;
 
     public PictureWorker(Context context) {
         this.context = context;
@@ -72,13 +74,16 @@ public class PictureWorker extends Thread {
                     imageViewController.AddBitmap(2, Bitmap.createBitmap(original, original.getWidth() / 2, 0, original.getWidth() / 2, original.getHeight() / 2));
                     imageViewController.AddBitmap(3, Bitmap.createBitmap(original, 0, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
                     imageViewController.AddBitmap(4, Bitmap.createBitmap(original, original.getWidth() / 2, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
-
+                    loaded++;
 
                 runner.post(new Runnable() {
                     @Override
                     public void run() {
                         System.out.println("1");
-                       imageViewController.setInitialBitmaps();
+                        if (loaded == totalImages) {
+                            //imageViewController.setInitialBitmaps();
+                            ImageViewController.randomiseImages();
+                        }
                     }
                 });
             }

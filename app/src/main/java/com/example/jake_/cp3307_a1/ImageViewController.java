@@ -22,14 +22,13 @@ public class ImageViewController {
     private static ArrayList<Bitmap> previewBitmaps = new ArrayList<>();
 
     //other variables to keep track of things
-    private static boolean loadInitalDone = false;
     private static int[] currentLoadedImage = new int[4];
     private static int targetImageIndex = 0;
 
     //this singleton's instance so can be accessed from any class
     protected static ImageViewController singleton = null;
 
-    //self instanciator
+    //self initiator
     private ImageViewController() {
     }
 
@@ -77,24 +76,7 @@ public class ImageViewController {
             bottomLeft.setImageResource(0);
             bottomRight.setImageResource(0);
         } catch (Exception e) {
-            //not loaded yet
-        }
-        loadInitalDone = false;
-    }
-
-    //sets the inital image (change this)
-    protected static void setInitialBitmaps() {
-        try {
-            if (!loadInitalDone) {
-                preview.setImageBitmap(previewBitmaps.get(0));
-                topLeft.setImageBitmap(topLeftBitmaps.get(0));
-                topRight.setImageBitmap(topRightBitmaps.get(0));
-                bottomLeft.setImageBitmap(bottomLeftBitmaps.get(0));
-                bottomRight.setImageBitmap(bottomRightBitmaps.get(0));
-                loadInitalDone = true;
-            }
-        } catch (Exception e) {
-            System.out.println("one or more initial images haven't loaded yet");
+            //imageviews haven't been loaded yet
         }
     }
 
@@ -107,6 +89,7 @@ public class ImageViewController {
         targetImageIndex = random.nextInt(topLeftBitmaps.size());
         currentLoadedImage = positions;
 
+        preview.setImageBitmap(previewBitmaps.get(targetImageIndex));
         topLeft.setImageBitmap(topLeftBitmaps.get(positions[0]));
         topRight.setImageBitmap(topRightBitmaps.get(positions[1]));
         bottomLeft.setImageBitmap(bottomLeftBitmaps.get(positions[2]));

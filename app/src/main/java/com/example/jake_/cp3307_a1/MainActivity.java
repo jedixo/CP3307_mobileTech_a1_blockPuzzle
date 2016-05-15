@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
             ImageViewController.setImageViews(3,(ImageView) findViewById(R.id.bottomLeft));
             ImageViewController.setImageViews(4,(ImageView) findViewById(R.id.bottomRight));
 
+            worker.totalImages = 2;
             worker.loadResource(R.drawable.a1, handler);
             worker.loadResource(R.drawable.a2, handler);
+
 
 
     }
