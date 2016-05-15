@@ -1,6 +1,7 @@
 package com.example.jake_.cp3307_a1;
 
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -157,7 +158,19 @@ public class ImageViewController {
 
     //checks if every tile belongs to the same image and that the image is the target image
     protected static boolean isComplete() {
-        return currentLoadedImage[0] == currentLoadedImage[1] && currentLoadedImage[0] == currentLoadedImage[2]
-                && currentLoadedImage[0] == currentLoadedImage[3] && currentLoadedImage[0] == targetImageIndex;
+        if (currentLoadedImage[0] == currentLoadedImage[1] && currentLoadedImage[0] == currentLoadedImage[2]
+                && currentLoadedImage[0] == currentLoadedImage[3] && currentLoadedImage[0] == targetImageIndex) {
+            topLeft.setColorFilter(Color.argb(100, 0, 255, 0));
+            topRight.setColorFilter(Color.argb(100, 0, 255, 0));
+            bottomLeft.setColorFilter(Color.argb(100, 0, 255, 0));
+            bottomRight.setColorFilter(Color.argb(100, 0, 255, 0));
+            topLeft.setEnabled(false);
+            topRight.setEnabled(false);
+            bottomLeft.setEnabled(false);
+            bottomRight.setEnabled(false);
+            return true;
+        }
+        return false;
+
     }
 }

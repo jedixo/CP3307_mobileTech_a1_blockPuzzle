@@ -4,15 +4,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private PictureWorker worker;
+    private int[] drawables = {R.drawable.pipe1,R.drawable.pipe2,R.drawable.pipe3,R.drawable.pipe4,R.drawable.pipe5,R.drawable.pipe6};
 
     public MainActivity() {
         worker = new PictureWorker(this);
@@ -29,21 +33,20 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //pass this entire array into controller
+        ImageView[] imgViews = {(ImageView) findViewById(R.id.preview), (ImageView) findViewById(R.id.topLeft),
+                (ImageView) findViewById(R.id.topRight), (ImageView) findViewById(R.id.bottomLeft), (ImageView) findViewById(R.id.bottomRight)};
 
         Handler handler = new Handler();
 
-            ImageViewController.setImageViews(0,(ImageView) findViewById(R.id.preview));
-            ImageViewController.setImageViews(1,(ImageView) findViewById(R.id.topLeft));
-            ImageViewController.setImageViews(2,(ImageView) findViewById(R.id.topRight));
-            ImageViewController.setImageViews(3,(ImageView) findViewById(R.id.bottomLeft));
-            ImageViewController.setImageViews(4,(ImageView) findViewById(R.id.bottomRight));
+        for (int i = 0; i < imgViews.length; i++) {
+            ImageViewController.setImageViews(i, imgViews[i]);
+        }
 
-            worker.totalImages = 2;
-            worker.loadResource(R.drawable.a1, handler);
-            worker.loadResource(R.drawable.a2, handler);
-
-
-
+        worker.totalImages = drawables.length;
+        for (int drawable : drawables) {
+            worker.loadResource(drawable, handler);
+        }
     }
 
 
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextImage(View view) {
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.topLeft:
                 ImageViewController.nextImage(1);
                 break;
