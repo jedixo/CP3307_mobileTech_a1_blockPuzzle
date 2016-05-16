@@ -12,10 +12,10 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private PictureWorker worker;
-    private int[] drawablesPipes = {R.drawable.pipe1,R.drawable.pipe2,R.drawable.pipe3,R.drawable.pipe4,R.drawable.pipe5,R.drawable.pipe6};
+    private int[] drawablesPipes = {R.drawable.pipe1, R.drawable.pipe2, R.drawable.pipe3, R.drawable.pipe4, R.drawable.pipe5, R.drawable.pipe6};
     private int[] drawablesShapes = {R.drawable.shape1, R.drawable.shape2, R.drawable.shape3, R.drawable.shape4, R.drawable.shape5};
     private int[] drawablesPatterns = {R.drawable.patterns1, R.drawable.patterns2, R.drawable.patterns3, R.drawable.patterns4,
-        R.drawable.patterns5, R.drawable.patterns6};
+            R.drawable.patterns5, R.drawable.patterns6};
 
     public MainActivity() {
         worker = new PictureWorker(this);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 

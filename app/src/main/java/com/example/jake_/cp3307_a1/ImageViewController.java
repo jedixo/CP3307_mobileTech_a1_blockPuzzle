@@ -28,7 +28,8 @@ public class ImageViewController {
     /**
      * Singleton self initializer
      */
-    private ImageViewController() {}
+    private ImageViewController() {
+    }
 
     /**
      * getInstance - returns the instance of the singleton
@@ -46,7 +47,7 @@ public class ImageViewController {
      * AddBitmap - adds a bitmap to an array for respective positions
      *
      * @param position - the position that the bitmap belongs to 0 - 4 = {p,tl,tr,bl,br}
-     * @param bitmap - the Bitmap object
+     * @param bitmap   - the Bitmap object
      */
     protected void AddBitmap(int position, Bitmap bitmap) {
         bitmaps.add(new ArrayList<Bitmap>());
@@ -69,7 +70,7 @@ public class ImageViewController {
 
     /**
      * randomiseImages - loads images to a view at random so that the puzzle is jumbled up
-     *                 - randomly selects a target image
+     * - randomly selects a target image
      */
     protected static void randomiseImages() {
         Random random = new Random();
