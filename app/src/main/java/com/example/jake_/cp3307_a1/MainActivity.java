@@ -9,14 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
 
     private PictureWorker worker;
-    private int[] drawables = {R.drawable.pipe1,R.drawable.pipe2,R.drawable.pipe3,R.drawable.pipe4,R.drawable.pipe5,R.drawable.pipe6};
+    private int[] drawablesPipes = {R.drawable.pipe1,R.drawable.pipe2,R.drawable.pipe3,R.drawable.pipe4,R.drawable.pipe5,R.drawable.pipe6};
+    private int[] drawablesShapes = {R.drawable.shape1, R.drawable.shape2, R.drawable.shape3, R.drawable.shape4, R.drawable.shape5};
+    private int[] drawablesPatterns = {R.drawable.patterns1, R.drawable.patterns2, R.drawable.patterns3, R.drawable.patterns4,
+        R.drawable.patterns5, R.drawable.patterns6};
 
     public MainActivity() {
         worker = new PictureWorker(this);
@@ -37,13 +36,33 @@ public class MainActivity extends AppCompatActivity {
         ImageView[] imgViews = {(ImageView) findViewById(R.id.preview), (ImageView) findViewById(R.id.topLeft),
                 (ImageView) findViewById(R.id.topRight), (ImageView) findViewById(R.id.bottomLeft), (ImageView) findViewById(R.id.bottomRight)};
 
-        Handler handler = new Handler();
 
-        for (int i = 0; i < imgViews.length; i++) {
-            ImageViewController.setImageViews(i, imgViews[i]);
+        Handler handler = new Handler();
+        ImageViewController.setViews(imgViews);
+
+
+        // for (int i = 0; i < imgViews.length; i++) {
+       //     ImageViewController.setImageViews(i, imgViews[i]);
+       // }
+
+        int length;
+        int[] drawables = {};
+        switch (SettingsSingleton.getTheme()) {
+            case "pipes":
+                length = drawablesPipes.length;
+                drawables = drawablesPipes;
+                break;
+            case "shapes":
+                length = drawablesShapes.length;
+                drawables = drawablesShapes;
+                break;
+            default:
+                length = drawablesPatterns.length;
+                drawables = drawablesPatterns;
+                break;
         }
 
-        worker.totalImages = drawables.length;
+        worker.totalImages = length;
         for (int drawable : drawables) {
             worker.loadResource(drawable, handler);
         }

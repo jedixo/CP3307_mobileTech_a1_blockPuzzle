@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -12,28 +13,28 @@ import java.util.Random;
  */
 public class ImageViewController {
 
-    //the imageViews
-    private static ImageView preview, topLeft, topRight, bottomLeft, bottomRight;
+    //the imageViews array {preview, topLeft, topRight, bottomLeft, bottomRight}
+    private static ImageView[] imageViews = {};
 
-    // the parts of all the images for the puzzle
-    private static ArrayList<Bitmap> topLeftBitmaps = new ArrayList<>();
-    private static ArrayList<Bitmap> topRightBitmaps = new ArrayList<>();
-    private static ArrayList<Bitmap> bottomLeftBitmaps = new ArrayList<>();
-    private static ArrayList<Bitmap> bottomRightBitmaps = new ArrayList<>();
-    private static ArrayList<Bitmap> previewBitmaps = new ArrayList<>();
+    //the nested bitmaps array in the same order as the ImageViews array
+    private static List<List<Bitmap>> bitmaps = new ArrayList<>(5);
 
-    //other variables to keep track of things
-    private static int[] currentLoadedImage = new int[4];
-    private static int targetImageIndex = 0;
+    //array the controls which image is currently being displayed
+    private static int[] currentLoadedImage = new int[5];
 
-    //this singleton's instance so can be accessed from any class
-    protected static ImageViewController singleton = null;
+    //this singleton's instance
+    private static ImageViewController singleton = null;
 
-    //self initiator
-    private ImageViewController() {
-    }
+    /**
+     * Singleton self initializer
+     */
+    private ImageViewController() {}
 
-    //returns the instance of this singleton
+    /**
+     * getInstance - returns the instance of the singleton
+     *
+     * @return ImageViewController
+     */
     public static ImageViewController getInstance() {
         if (singleton == null) {
             singleton = new ImageViewController();
@@ -41,136 +42,85 @@ public class ImageViewController {
         return singleton;
     }
 
-    //adds bitmaps to their repsective arrays
+    /**
+     * AddBitmap - adds a bitmap to an array for respective positions
+     *
+     * @param position - the position that the bitmap belongs to 0 - 4 = {p,tl,tr,bl,br}
+     * @param bitmap - the Bitmap object
+     */
     protected void AddBitmap(int position, Bitmap bitmap) {
-        switch (position) {
-            case 0:
-                previewBitmaps.add(bitmap);
-                break;
-            case 1:
-                topLeftBitmaps.add(bitmap);
-                break;
-            case 2:
-                topRightBitmaps.add(bitmap);
-                break;
-            case 3:
-                bottomLeftBitmaps.add(bitmap);
-                break;
-            default:
-                bottomRightBitmaps.add(bitmap);
-                break;
-        }
-
+        bitmaps.add(new ArrayList<Bitmap>());
+        bitmaps.get(position).add(bitmap);
     }
 
-    //clears the pictures from memory and clears the imageViews
+    /**
+     * clearBitmaps - clears all the bitmaps and set images from memory
+     */
     protected static void clearBitmaps() {
-        previewBitmaps = new ArrayList<>();
-        topLeftBitmaps = new ArrayList<>();
-        topRightBitmaps = new ArrayList<>();
-        bottomLeftBitmaps = new ArrayList<>();
-        bottomRightBitmaps = new ArrayList<>();
+        bitmaps = new ArrayList<>(5);
         try {
-            preview.setImageResource(0);
-            topLeft.setImageResource(0);
-            topRight.setImageResource(0);
-            bottomLeft.setImageResource(0);
-            bottomRight.setImageResource(0);
+            for (ImageView imageView : imageViews) {
+                imageView.setImageResource(0);
+            }
         } catch (Exception e) {
-            //imageviews haven't been loaded yet
+            //ImageViews haven't been loaded yet
         }
     }
 
-    //randomises the imagees on the imageviews
+    /**
+     * randomiseImages - loads images to a view at random so that the puzzle is jumbled up
+     *                 - randomly selects a target image
+     */
     protected static void randomiseImages() {
         Random random = new Random();
-
-        int[] positions = {random.nextInt(topLeftBitmaps.size()), random.nextInt(topLeftBitmaps.size()),
-                random.nextInt(topLeftBitmaps.size()), random.nextInt(topLeftBitmaps.size())};
-        targetImageIndex = random.nextInt(topLeftBitmaps.size());
+        int size = bitmaps.get(0).size();
+        int[] positions = {random.nextInt(size), random.nextInt(size), random.nextInt(size), random.nextInt(size), random.nextInt(size)};
         currentLoadedImage = positions;
 
-        preview.setImageBitmap(previewBitmaps.get(targetImageIndex));
-        topLeft.setImageBitmap(topLeftBitmaps.get(positions[0]));
-        topRight.setImageBitmap(topRightBitmaps.get(positions[1]));
-        bottomLeft.setImageBitmap(bottomLeftBitmaps.get(positions[2]));
-        bottomRight.setImageBitmap(bottomRightBitmaps.get(positions[3]));
+        for (int i = 0; i < imageViews.length; i++) {
+            imageViews[i].setImageBitmap(bitmaps.get(i).get(positions[i]));
+        }
     }
 
-    //gets the next image for a particular view
+    /**
+     * nextImage - gets the next sequential image for a particular ImageView
+     *
+     * @param id - the identification of an ImageView 1 - 4 {tl, tr, bl, br}
+     */
     protected static void nextImage(int id) {
-        switch (id) {
-            case 1:
-                if (currentLoadedImage[0] + 1 < topLeftBitmaps.size()) {
-                    currentLoadedImage[0]++;
-                } else {
-                    currentLoadedImage[0] = 0;
-                }
-                topLeft.setImageBitmap(topLeftBitmaps.get(currentLoadedImage[0]));
-                break;
-            case 2:
-                if (currentLoadedImage[1] + 1 < topLeftBitmaps.size()) {
-                    currentLoadedImage[1]++;
-                } else {
-                    currentLoadedImage[1] = 0;
-                }
-                topRight.setImageBitmap(topRightBitmaps.get(currentLoadedImage[1]));
-                break;
-            case 3:
-                if (currentLoadedImage[2] + 1 < topLeftBitmaps.size()) {
-                    currentLoadedImage[2]++;
-                } else {
-                    currentLoadedImage[2] = 0;
-                }
-                bottomLeft.setImageBitmap(bottomLeftBitmaps.get(currentLoadedImage[2]));
-                break;
-            default:
-                if (currentLoadedImage[3] + 1 < topLeftBitmaps.size()) {
-                    currentLoadedImage[3]++;
-                } else {
-                    currentLoadedImage[3] = 0;
-                }
-                bottomRight.setImageBitmap(bottomRightBitmaps.get(currentLoadedImage[3]));
-                break;
+        if (currentLoadedImage[id] + 1 < bitmaps.get(id).size()) {
+            currentLoadedImage[id]++;
+        } else {
+            currentLoadedImage[id] = 0;
         }
+
+        imageViews[id].setImageBitmap(bitmaps.get(id).get(currentLoadedImage[id]));
     }
 
-    // makes the imageViews known to the class
-    protected static void setImageViews(int position, ImageView imgv) {
-        switch (position) {
-            case 0:
-                preview = imgv;
-                break;
-            case 1:
-                topLeft = imgv;
-                break;
-            case 2:
-                topRight = imgv;
-                break;
-            case 3:
-                bottomLeft = imgv;
-                break;
-            default:
-                bottomRight = imgv;
-                break;
-        }
-    }
-
-    //checks if every tile belongs to the same image and that the image is the target image
+    /**
+     * isComplete - checks if the puzzle has been matched to the target image
+     *
+     * @return boolean - false if the puzzle is not complete, true if it is complete
+     */
     protected static boolean isComplete() {
-        if (currentLoadedImage[0] == currentLoadedImage[1] && currentLoadedImage[0] == currentLoadedImage[2]
-                && currentLoadedImage[0] == currentLoadedImage[3] && currentLoadedImage[0] == targetImageIndex) {
-            topLeft.setColorFilter(Color.argb(100, 0, 255, 0));
-            topRight.setColorFilter(Color.argb(100, 0, 255, 0));
-            bottomLeft.setColorFilter(Color.argb(100, 0, 255, 0));
-            bottomRight.setColorFilter(Color.argb(100, 0, 255, 0));
-            topLeft.setEnabled(false);
-            topRight.setEnabled(false);
-            bottomLeft.setEnabled(false);
-            bottomRight.setEnabled(false);
+        if (currentLoadedImage[1] == currentLoadedImage[2] && currentLoadedImage[1] == currentLoadedImage[3]
+                && currentLoadedImage[1] == currentLoadedImage[4] && currentLoadedImage[1] == currentLoadedImage[0]) {
+
+            for (ImageView imageView : imageViews) {
+                imageView.setColorFilter(Color.argb(100, 0, 255, 0));
+                imageView.setEnabled(false);
+            }
             return true;
         }
         return false;
+    }
 
+    /**
+     * setViews - sets the ImageView array
+     *
+     * @param imgViews - an array containing all 5 imageViews
+     */
+    protected static void setViews(ImageView[] imgViews) {
+        imageViews = imgViews;
     }
 }
