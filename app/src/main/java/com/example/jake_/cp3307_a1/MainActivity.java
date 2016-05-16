@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         //pass this entire array into controller
         ImageView[] imgViews = {(ImageView) findViewById(R.id.preview), (ImageView) findViewById(R.id.topLeft),
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         ImageViewController.setViews(imgViews);
 
         int length;
-        int[] drawables = {};
+        int[] drawables;
         switch (SettingsSingleton.getTheme()) {
             case "pipes":
                 length = drawablesPipes.length;
