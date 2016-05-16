@@ -9,7 +9,17 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a1538f9-d301-4374-b8fa-9023201bafa7" name="Default" comment="" />
+    <list default="true" id="8a1538f9-d301-4374-b8fa-9023201bafa7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java" />
+    </list>
     <ignored path="CP3307_mobileTech_a1_blockPuzzle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,25 +100,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageViewController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageViewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8333334">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="118" column="10" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="10" />
               <folding>
-                <element signature="e#3973#3974#0" expanded="true" />
-                <element signature="e#4010#4011#0" expanded="true" />
+                <element signature="e#4251#4252#0" expanded="true" />
+                <element signature="e#4288#4289#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="1.0053763">
+              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+              <folding>
+                <element signature="e#3117#3118#0" expanded="true" />
+                <element signature="e#3160#3161#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1822,8 +1835,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/SettingsSingleton.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2345,8 +2358,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
           <folding>
-            <element signature="e#3973#3974#0" expanded="true" />
-            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2355,7 +2368,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2397,8 +2413,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
           <folding>
-            <element signature="e#3973#3974#0" expanded="true" />
-            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2407,7 +2423,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2446,8 +2465,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3973#3974#0" expanded="true" />
-            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2456,7 +2475,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2498,8 +2520,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
-            <element signature="e#3973#3974#0" expanded="true" />
-            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2508,7 +2530,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2550,8 +2575,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="24" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="24" />
           <folding>
-            <element signature="e#3973#3974#0" expanded="true" />
-            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2560,7 +2585,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
-          <folding />
+          <folding>
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2591,8 +2619,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <element signature="e#3973#3974#0" expanded="true" />
-            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2601,7 +2629,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2730,21 +2761,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
+          <caret line="118" column="10" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="10" />
+          <folding>
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8333334">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        <state vertical-scroll-proportion="1.0053763">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
           <folding>
-            <element signature="e#3973#3974#0" expanded="true" />
-            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -116,6 +116,17 @@ public class ImageViewController {
     }
 
     /**
+     * reset - Resets the game
+     */
+    protected static void reset() {
+        for (ImageView imageView : imageViews) {
+            imageView.setColorFilter(Color.argb(0, 0, 0, 0));
+            imageView.setEnabled(true);
+        }
+        randomiseImages();
+    }
+
+    /**
      * setViews - sets the ImageView array
      *
      * @param imgViews - an array containing all 5 imageViews

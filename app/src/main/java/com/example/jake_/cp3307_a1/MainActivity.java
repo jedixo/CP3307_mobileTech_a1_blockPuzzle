@@ -40,11 +40,6 @@ public class MainActivity extends AppCompatActivity {
         Handler handler = new Handler();
         ImageViewController.setViews(imgViews);
 
-
-        // for (int i = 0; i < imgViews.length; i++) {
-       //     ImageViewController.setImageViews(i, imgViews[i]);
-       // }
-
         int length;
         int[] drawables = {};
         switch (SettingsSingleton.getTheme()) {
@@ -92,8 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click(View view) {
-        System.out.println("test");
-        ImageViewController.randomiseImages();
+        ImageViewController.reset();
     }
 
     public void nextImage(View view) {
