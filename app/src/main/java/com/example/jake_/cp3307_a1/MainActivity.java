@@ -1,7 +1,10 @@
 package com.example.jake_.cp3307_a1;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -16,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private int[] drawablesShapes = {R.drawable.shape1, R.drawable.shape2, R.drawable.shape3, R.drawable.shape4, R.drawable.shape5};
     private int[] drawablesPatterns = {R.drawable.patterns1, R.drawable.patterns2, R.drawable.patterns3, R.drawable.patterns4,
             R.drawable.patterns5, R.drawable.patterns6};
+
+    private static DatabaseAccess database;
 
     public MainActivity() {
         worker = new PictureWorker(this);
@@ -38,6 +43,21 @@ public class MainActivity extends AppCompatActivity {
         ImageView[] imgViews = {(ImageView) findViewById(R.id.preview), (ImageView) findViewById(R.id.topLeft),
                 (ImageView) findViewById(R.id.topRight), (ImageView) findViewById(R.id.bottomLeft), (ImageView) findViewById(R.id.bottomRight)};
 
+            database = new DatabaseAccess(this);
+            database = SettingsSingleton.getDataaseAccess();
+
+        /**
+         Cursor cursor = database.getAllCursor();
+         int count = cursor.getCount();
+         System.out.println(count);
+         while (cursor.moveToNext()) {
+             int id = cursor.getInt(0);
+             int comp = cursor.getInt(1);
+             int touch = cursor.getInt(2);
+             System.out.println(String.format("%s %s %s",id , comp, touch));
+         }
+         cursor.close();
+        */
 
         Handler handler = new Handler();
         ImageViewController.setViews(imgViews);
