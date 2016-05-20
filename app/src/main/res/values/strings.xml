@@ -2,9 +2,4 @@
     <string name="app_name">My first block puzzle</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings">Parental Settings</string>
-    <string-array name="puzzle_array">
-        <item>pipes</item>
-        <item>shapes</item>
-        <item>patterns</item>
-    </string-array>
 </resources>

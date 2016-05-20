@@ -12,6 +12,37 @@
     tools:context="com.example.jake_.cp3307_a1.SettingsActivity"
     tools:showIn="@layout/activity_settings">
 
+    <RadioGroup
+        android:id="@+id/radioTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Done"
+        android:layout_alignEnd="@+id/Done"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton">
+
+        <RadioButton
+            android:id="@+id/radioPipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pipes"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioShapes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="shapes" />
+
+        <RadioButton
+            android:id="@+id/radioPatterns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="patterns" />
+
+    </RadioGroup>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,11 +53,4 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/Done"
-        android:layout_alignParentTop="true" />
 </RelativeLayout>

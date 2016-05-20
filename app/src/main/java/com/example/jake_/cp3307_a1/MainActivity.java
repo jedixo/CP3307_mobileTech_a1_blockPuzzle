@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.patterns5, R.drawable.patterns6};
 
     private static DatabaseAccess database;
+    private String theme;
 
     public MainActivity() {
         worker = new PictureWorker(this);
@@ -43,28 +44,20 @@ public class MainActivity extends AppCompatActivity {
         ImageView[] imgViews = {(ImageView) findViewById(R.id.preview), (ImageView) findViewById(R.id.topLeft),
                 (ImageView) findViewById(R.id.topRight), (ImageView) findViewById(R.id.bottomLeft), (ImageView) findViewById(R.id.bottomRight)};
 
-            database = new DatabaseAccess(this);
-            database = SettingsSingleton.getDataaseAccess();
+        database = new DatabaseAccess(this);
 
-        /**
-         Cursor cursor = database.getAllCursor();
-         int count = cursor.getCount();
-         System.out.println(count);
-         while (cursor.moveToNext()) {
-             int id = cursor.getInt(0);
-             int comp = cursor.getInt(1);
-             int touch = cursor.getInt(2);
-             System.out.println(String.format("%s %s %s",id , comp, touch));
-         }
-         cursor.close();
-        */
 
         Handler handler = new Handler();
         ImageViewController.setViews(imgViews);
 
+        Bundle settingsData = getIntent().getExtras();
+        if (settingsData != null) {
+            theme = settingsData.getString("theme");
+        }
+
         int length;
         int[] drawables;
-        switch (SettingsSingleton.getTheme()) {
+        switch (theme) {
             case "pipes":
                 length = drawablesPipes.length;
                 drawables = drawablesPipes;
@@ -108,11 +101,26 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void click(View view) {
+    public void Randomize(View view) {
         ImageViewController.reset();
     }
 
     public void nextImage(View view) {
+
+        /**
+         Cursor cursor = database.getAllCursor();
+         int count = cursor.getCount();
+         System.out.println(count);
+         while (cursor.moveToNext()) {
+         int id = cursor.getInt(0);
+         int comp = cursor.getInt(1);
+         int touch = cursor.getInt(2);
+         System.out.println(String.format("%s %s %s",id , comp, touch));
+         }
+         cursor.close();
+         */
+
+
         switch (view.getId()) {
             case R.id.topLeft:
                 ImageViewController.nextImage(1);

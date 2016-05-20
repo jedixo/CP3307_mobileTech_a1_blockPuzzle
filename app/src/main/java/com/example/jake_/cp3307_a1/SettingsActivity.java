@@ -2,16 +2,19 @@ package com.example.jake_.cp3307_a1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private ImageViewController imageViewController = ImageViewController.getInstance();
+    private RadioGroup radioThemeGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,30 +23,17 @@ public class SettingsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        imageViewController.clearBitmaps();
+        ImageViewController.clearBitmaps();
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.puzzle_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                SettingsSingleton.setTheme((String) parent.getItemAtPosition(position));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
+        radioThemeGroup = (RadioGroup) findViewById(R.id.radioTheme);
     }
 
 
     public void DonePressed(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        int selectedID = radioThemeGroup.getCheckedRadioButtonId();
+        RadioButton radioThemeButton = (RadioButton) findViewById(selectedID);
+        intent.putExtra("theme",radioThemeButton.getText());
         startActivity(intent);
     }
 
