@@ -11,3 +11,16 @@ public class StatisticsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_statistics);
     }
 }
+
+
+/**Cursor cursor = database.getAllCursor();
+ int count = cursor.getCount();
+
+ System.out.println("entry: " + count);
+ while (cursor.moveToNext()) {
+ int id = cursor.getInt(0);
+ int comp = cursor.getInt(1);
+ int touch = cursor.getInt(2);
+ System.out.println(String.format("%s %s %s", id, comp, touch));
+ }
+ cursor.close();*/
