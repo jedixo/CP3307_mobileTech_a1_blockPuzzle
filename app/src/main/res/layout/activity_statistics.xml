@@ -9,4 +9,99 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jake_.cp3307_a1.StatisticsActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Total Puzzles completed: "
+        android:id="@+id/label1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/totalPuzzles"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/label3"
+        android:layout_alignParentTop="true"
+        android:password="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Total Number of Touches: "
+        android:id="@+id/label2"
+        android:layout_below="@+id/label1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/totalTouches"
+        android:layout_below="@+id/label1"
+        android:layout_alignEnd="@+id/totalPuzzles"
+        android:layout_toEndOf="@+id/label3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Average touches per puzzle: "
+        android:id="@+id/label3"
+        android:layout_below="@+id/label2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/averageTouches"
+        android:layout_alignTop="@+id/label3"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/label3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Puzzle"
+        android:id="@+id/backButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Golbal avg touches: "
+        android:id="@+id/label4"
+        android:layout_above="@+id/backButton"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/gloablAvg"
+        android:layout_above="@+id/backButton"
+        android:layout_alignEnd="@+id/backButton"
+        android:layout_toEndOf="@+id/label3" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/label3"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/label4" />
+
 </RelativeLayout>
