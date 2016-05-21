@@ -91,10 +91,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getTitle().equals("Statistics")) {
-            database.addNewEntry(numCompleted, touches);
-            Intent intent = new Intent(this, StatisticsActivity.class);
-            startActivity(intent);
+        try {
+            if (item.getTitle().equals("Statistics")) {
+                database.addNewEntry(numCompleted, touches);
+                Intent intent = new Intent(this, StatisticsActivity.class);
+                startActivity(intent);
+            }
+        } catch (Exception e){
+            //item not selected
         }
         return super.onOptionsItemSelected(item);
     }
