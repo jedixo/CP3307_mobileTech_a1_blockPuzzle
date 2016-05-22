@@ -2,6 +2,8 @@ package com.example.jake_.cp3307_a1;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private PictureWorker worker;
     private static DatabaseAccess database;
+    private SoundSystem soundSystem;
 
     private Button randomButton;
     private int[] drawablesPipes = {R.drawable.pipe1, R.drawable.pipe2, R.drawable.pipe3, R.drawable.pipe4, R.drawable.pipe5, R.drawable.pipe6};
@@ -131,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (ImageViewController.isComplete()) {
+            //pool.play(soundID,1,1,1,0,1);
             randomButton.setEnabled(true);
             database.addNewEntry(touches);
         }
