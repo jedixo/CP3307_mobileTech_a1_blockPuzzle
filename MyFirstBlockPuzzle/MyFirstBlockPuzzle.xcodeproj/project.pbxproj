@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBAE4B9F1CF1EF3B0060CC45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE4B9E1CF1EF3B0060CC45 /* AppDelegate.swift */; };
+		BBAE4BA11CF1EF3B0060CC45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE4BA01CF1EF3B0060CC45 /* ViewController.swift */; };
+		BBAE4BA41CF1EF3B0060CC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBAE4BA21CF1EF3B0060CC45 /* Main.storyboard */; };
+		BBAE4BA71CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBAE4BA51CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodeld */; };
+		BBAE4BA91CF1EF3C0060CC45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBAE4BA81CF1EF3C0060CC45 /* Assets.xcassets */; };
+		BBAE4BAC1CF1EF3C0060CC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBAE4BAA1CF1EF3C0060CC45 /* LaunchScreen.storyboard */; };
+		BBAE4BB71CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE4BB61CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.swift */; };
+		BBAE4BC21CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE4BC11CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBAE4BB31CF1EF3C0060CC45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBAE4B931CF1EF3B0060CC45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBAE4B9A1CF1EF3B0060CC45;
+			remoteInfo = MyFirstBlockPuzzle;
+		};
+		BBAE4BBE1CF1EF3C0060CC45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBAE4B931CF1EF3B0060CC45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBAE4B9A1CF1EF3B0060CC45;
+			remoteInfo = MyFirstBlockPuzzle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBAE4B9B1CF1EF3B0060CC45 /* MyFirstBlockPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstBlockPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBAE4B9E1CF1EF3B0060CC45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBAE4BA01CF1EF3B0060CC45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBAE4BA31CF1EF3B0060CC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBAE4BA61CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyFirstBlockPuzzle.xcdatamodel; sourceTree = "<group>"; };
+		BBAE4BA81CF1EF3C0060CC45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBAE4BAB1CF1EF3C0060CC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBAE4BAD1CF1EF3C0060CC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBAE4BB21CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstBlockPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBAE4BB61CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstBlockPuzzleTests.swift; sourceTree = "<group>"; };
+		BBAE4BB81CF1EF3C0060CC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBAE4BBD1CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstBlockPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBAE4BC11CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstBlockPuzzleUITests.swift; sourceTree = "<group>"; };
+		BBAE4BC31CF1EF3C0060CC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBAE4B981CF1EF3B0060CC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBAE4BAF1CF1EF3C0060CC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBAE4BBA1CF1EF3C0060CC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBAE4B921CF1EF3B0060CC45 = {
+			isa = PBXGroup;
+			children = (
+				BBAE4B9D1CF1EF3B0060CC45 /* MyFirstBlockPuzzle */,
+				BBAE4BB51CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests */,
+				BBAE4BC01CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests */,
+				BBAE4B9C1CF1EF3B0060CC45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBAE4B9C1CF1EF3B0060CC45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBAE4B9B1CF1EF3B0060CC45 /* MyFirstBlockPuzzle.app */,
+				BBAE4BB21CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.xctest */,
+				BBAE4BBD1CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBAE4B9D1CF1EF3B0060CC45 /* MyFirstBlockPuzzle */ = {
+			isa = PBXGroup;
+			children = (
+				BBAE4B9E1CF1EF3B0060CC45 /* AppDelegate.swift */,
+				BBAE4BA01CF1EF3B0060CC45 /* ViewController.swift */,
+				BBAE4BA21CF1EF3B0060CC45 /* Main.storyboard */,
+				BBAE4BA81CF1EF3C0060CC45 /* Assets.xcassets */,
+				BBAE4BAA1CF1EF3C0060CC45 /* LaunchScreen.storyboard */,
+				BBAE4BAD1CF1EF3C0060CC45 /* Info.plist */,
+				BBAE4BA51CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodeld */,
+			);
+			path = MyFirstBlockPuzzle;
+			sourceTree = "<group>";
+		};
+		BBAE4BB51CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBAE4BB61CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.swift */,
+				BBAE4BB81CF1EF3C0060CC45 /* Info.plist */,
+			);
+			path = MyFirstBlockPuzzleTests;
+			sourceTree = "<group>";
+		};
+		BBAE4BC01CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBAE4BC11CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.swift */,
+				BBAE4BC31CF1EF3C0060CC45 /* Info.plist */,
+			);
+			path = MyFirstBlockPuzzleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBAE4B9A1CF1EF3B0060CC45 /* MyFirstBlockPuzzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBAE4BC61CF1EF3C0060CC45 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzle" */;
+			buildPhases = (
+				BBAE4B971CF1EF3B0060CC45 /* Sources */,
+				BBAE4B981CF1EF3B0060CC45 /* Frameworks */,
+				BBAE4B991CF1EF3B0060CC45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyFirstBlockPuzzle;
+			productName = MyFirstBlockPuzzle;
+			productReference = BBAE4B9B1CF1EF3B0060CC45 /* MyFirstBlockPuzzle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBAE4BB11CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBAE4BC91CF1EF3C0060CC45 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzleTests" */;
+			buildPhases = (
+				BBAE4BAE1CF1EF3C0060CC45 /* Sources */,
+				BBAE4BAF1CF1EF3C0060CC45 /* Frameworks */,
+				BBAE4BB01CF1EF3C0060CC45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBAE4BB41CF1EF3C0060CC45 /* PBXTargetDependency */,
+			);
+			name = MyFirstBlockPuzzleTests;
+			productName = MyFirstBlockPuzzleTests;
+			productReference = BBAE4BB21CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBAE4BBC1CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBAE4BCC1CF1EF3C0060CC45 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzleUITests" */;
+			buildPhases = (
+				BBAE4BB91CF1EF3C0060CC45 /* Sources */,
+				BBAE4BBA1CF1EF3C0060CC45 /* Frameworks */,
+				BBAE4BBB1CF1EF3C0060CC45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBAE4BBF1CF1EF3C0060CC45 /* PBXTargetDependency */,
+			);
+			name = MyFirstBlockPuzzleUITests;
+			productName = MyFirstBlockPuzzleUITests;
+			productReference = BBAE4BBD1CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBAE4B931CF1EF3B0060CC45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jake Dixon";
+				TargetAttributes = {
+					BBAE4B9A1CF1EF3B0060CC45 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					BBAE4BB11CF1EF3C0060CC45 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BBAE4B9A1CF1EF3B0060CC45;
+					};
+					BBAE4BBC1CF1EF3C0060CC45 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BBAE4B9A1CF1EF3B0060CC45;
+					};
+				};
+			};
+			buildConfigurationList = BBAE4B961CF1EF3B0060CC45 /* Build configuration list for PBXProject "MyFirstBlockPuzzle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBAE4B921CF1EF3B0060CC45;
+			productRefGroup = BBAE4B9C1CF1EF3B0060CC45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBAE4B9A1CF1EF3B0060CC45 /* MyFirstBlockPuzzle */,
+				BBAE4BB11CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests */,
+				BBAE4BBC1CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBAE4B991CF1EF3B0060CC45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAE4BAC1CF1EF3C0060CC45 /* LaunchScreen.storyboard in Resources */,
+				BBAE4BA91CF1EF3C0060CC45 /* Assets.xcassets in Resources */,
+				BBAE4BA41CF1EF3B0060CC45 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBAE4BB01CF1EF3C0060CC45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBAE4BBB1CF1EF3C0060CC45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBAE4B971CF1EF3B0060CC45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAE4BA71CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodeld in Sources */,
+				BBAE4BA11CF1EF3B0060CC45 /* ViewController.swift in Sources */,
+				BBAE4B9F1CF1EF3B0060CC45 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBAE4BAE1CF1EF3C0060CC45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAE4BB71CF1EF3C0060CC45 /* MyFirstBlockPuzzleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBAE4BB91CF1EF3C0060CC45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAE4BC21CF1EF3C0060CC45 /* MyFirstBlockPuzzleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBAE4BB41CF1EF3C0060CC45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBAE4B9A1CF1EF3B0060CC45 /* MyFirstBlockPuzzle */;
+			targetProxy = BBAE4BB31CF1EF3C0060CC45 /* PBXContainerItemProxy */;
+		};
+		BBAE4BBF1CF1EF3C0060CC45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBAE4B9A1CF1EF3B0060CC45 /* MyFirstBlockPuzzle */;
+			targetProxy = BBAE4BBE1CF1EF3C0060CC45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBAE4BA21CF1EF3B0060CC45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBAE4BA31CF1EF3B0060CC45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBAE4BAA1CF1EF3C0060CC45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBAE4BAB1CF1EF3C0060CC45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBAE4BC41CF1EF3C0060CC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBAE4BC51CF1EF3C0060CC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBAE4BC71CF1EF3C0060CC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyFirstBlockPuzzle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jcu.edu.au.MyFirstBlockPuzzle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BBAE4BC81CF1EF3C0060CC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyFirstBlockPuzzle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jcu.edu.au.MyFirstBlockPuzzle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BBAE4BCA1CF1EF3C0060CC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyFirstBlockPuzzleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jcu.edu.au.MyFirstBlockPuzzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFirstBlockPuzzle.app/MyFirstBlockPuzzle";
+			};
+			name = Debug;
+		};
+		BBAE4BCB1CF1EF3C0060CC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyFirstBlockPuzzleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jcu.edu.au.MyFirstBlockPuzzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFirstBlockPuzzle.app/MyFirstBlockPuzzle";
+			};
+			name = Release;
+		};
+		BBAE4BCD1CF1EF3C0060CC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyFirstBlockPuzzleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jcu.edu.au.MyFirstBlockPuzzleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyFirstBlockPuzzle;
+			};
+			name = Debug;
+		};
+		BBAE4BCE1CF1EF3C0060CC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyFirstBlockPuzzleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jcu.edu.au.MyFirstBlockPuzzleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyFirstBlockPuzzle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBAE4B961CF1EF3B0060CC45 /* Build configuration list for PBXProject "MyFirstBlockPuzzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBAE4BC41CF1EF3C0060CC45 /* Debug */,
+				BBAE4BC51CF1EF3C0060CC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBAE4BC61CF1EF3C0060CC45 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBAE4BC71CF1EF3C0060CC45 /* Debug */,
+				BBAE4BC81CF1EF3C0060CC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBAE4BC91CF1EF3C0060CC45 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBAE4BCA1CF1EF3C0060CC45 /* Debug */,
+				BBAE4BCB1CF1EF3C0060CC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBAE4BCC1CF1EF3C0060CC45 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBAE4BCD1CF1EF3C0060CC45 /* Debug */,
+				BBAE4BCE1CF1EF3C0060CC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BBAE4BA51CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BBAE4BA61CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodel */,
+			);
+			currentVersion = BBAE4BA61CF1EF3C0060CC45 /* MyFirstBlockPuzzle.xcdatamodel */;
+			path = MyFirstBlockPuzzle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BBAE4B931CF1EF3B0060CC45 /* Project object */;
+}
