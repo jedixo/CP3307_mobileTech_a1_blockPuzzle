@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jake_.cp3307_a1.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:weightSum="2"
+        android:measureWithLargestChild="false">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/topLeft"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:padding="1dp"
+            android:contextClickable="false"
+            android:onClick="nextImage" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/topRight"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:padding="1dp"
+            android:cropToPadding="false"
+            android:onClick="nextImage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomLeft"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:padding="1dp"
+            android:onClick="nextImage" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomRight"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:onClick="nextImage"
+            android:padding="1dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4.25">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Randomize"
+            android:onClick="Randomize"
+            android:id="@+id/randomButton"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/preview"
+            android:layout_weight="2.5" />
+    </LinearLayout>
+
+</LinearLayout>
