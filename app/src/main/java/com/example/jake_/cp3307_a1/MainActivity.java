@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 (ImageView) findViewById(R.id.topRight), (ImageView) findViewById(R.id.bottomLeft), (ImageView) findViewById(R.id.bottomRight)};
 
         database = new DatabaseAccess(this);
-
+        soundSystem = new SoundSystem(this);
 
         Handler handler = new Handler();
         ImageViewController.setViews(imgViews);
@@ -113,10 +113,10 @@ public class MainActivity extends AppCompatActivity {
         touches = 0;
         ImageViewController.reset();
         randomButton.setEnabled(false);
+
     }
 
     public void nextImage(View view) {
-
         touches += 1;
         switch (view.getId()) {
             case R.id.topLeft:
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (ImageViewController.isComplete()) {
-            //pool.play(soundID,1,1,1,0,1);
+            soundSystem.play();
             randomButton.setEnabled(true);
             database.addNewEntry(touches);
         }
@@ -147,6 +147,18 @@ public class MainActivity extends AppCompatActivity {
         worker.quit();
         this.finish();
         Runtime.getRuntime().gc();
+    }
+
+    @Override
+    public void onPause() {
+        soundSystem.stop();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        soundSystem.start();
     }
 
 }

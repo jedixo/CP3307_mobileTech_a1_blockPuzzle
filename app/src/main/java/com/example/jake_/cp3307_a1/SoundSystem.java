@@ -6,16 +6,17 @@ import android.media.SoundPool;
 import android.os.Handler;
 import android.os.Looper;
 
-/**
- * Created by jakedixon on 22/05/2016.
- */
+
 public class SoundSystem {
 
     public int id;
     public int count;
     public int MAX_COUNT = 1;
     public boolean ready = false;
+
     private SoundPool pool;
+    private Looper looper;
+    private Handler handler;
 
     public SoundSystem(Context context) {
         pool = new SoundPool(12, AudioManager.STREAM_MUSIC, 0);
@@ -24,10 +25,7 @@ public class SoundSystem {
             @Override
             public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
 
-                if (status != 0) {
-                    //error
-                    return;
-                }
+                if (status != 0) return;
 
                 count++;
                 if (count == MAX_COUNT) {
@@ -40,28 +38,37 @@ public class SoundSystem {
     }
 
     public void start() {
-
+        LooperThread thread = new LooperThread();
+        thread.start();
     }
 
     public void stop() {
-
+        looper.quit();
     }
 
-    public void play(int sampleID) {
+    public void play() {
+        if (!ready) return;
 
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                pool.play(id, 1, 1, 1, 0, 1);
+            }
+        });
     }
 
-
-    private Looper looper;
-    private Handler handler;
 
     private class LooperThread extends Thread {
         @Override
         public void run() {
-            
+            try {
+                Looper.prepare();
+                looper = Looper.myLooper();
+                handler = new Handler(looper);
+                Looper.loop();
+            } catch (Exception e) {
+                //looper terminated
+            }
         }
-
-
-
     }
 }
