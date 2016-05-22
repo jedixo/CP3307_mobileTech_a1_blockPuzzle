@@ -77,7 +77,7 @@
             android:layout_height="match_parent"
             android:text="Randomize"
             android:onClick="Randomize"
-            android:id="@+id/button"
+            android:id="@+id/randomButton"
             android:layout_weight="1" />
 
         <ImageView

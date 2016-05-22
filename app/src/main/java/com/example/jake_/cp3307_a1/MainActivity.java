@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private PictureWorker worker;
     private static DatabaseAccess database;
 
+    private Button randomButton;
     private int[] drawablesPipes = {R.drawable.pipe1, R.drawable.pipe2, R.drawable.pipe3, R.drawable.pipe4, R.drawable.pipe5, R.drawable.pipe6};
     private int[] drawablesShapes = {R.drawable.shape1, R.drawable.shape2, R.drawable.shape3, R.drawable.shape4, R.drawable.shape5};
     private int[] drawablesPatterns = {R.drawable.patterns1, R.drawable.patterns2, R.drawable.patterns3, R.drawable.patterns4,
@@ -23,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     private String theme;
     private int touches = 0;
-    private int numCompleted = 0;
 
 
     public MainActivity() {
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        randomButton = (Button) findViewById(R.id.randomButton);
+        randomButton.setEnabled(false);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -93,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         try {
             if (item.getTitle().equals("Statistics")) {
-                database.addNewEntry(numCompleted, touches);
                 Intent intent = new Intent(this, StatisticsActivity.class);
                 startActivity(intent);
             }
@@ -104,7 +107,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Randomize(View view) {
+        touches = 0;
         ImageViewController.reset();
+        randomButton.setEnabled(false);
     }
 
     public void nextImage(View view) {
@@ -126,8 +131,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (ImageViewController.isComplete()) {
-            //activate randomise button
-            numCompleted += 1;
+            randomButton.setEnabled(true);
+            database.addNewEntry(touches);
         }
 
     }

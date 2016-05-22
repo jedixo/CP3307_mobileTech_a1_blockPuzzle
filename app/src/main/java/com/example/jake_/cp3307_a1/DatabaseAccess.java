@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseAccess extends SQLiteOpenHelper {
 
-    private static int VERSION = 5;
+    private static int VERSION = 6;
     private static String TABLENAME = "performance";
     private static String DATABASE = "performanceData";
 
@@ -31,7 +31,7 @@ public class DatabaseAccess extends SQLiteOpenHelper {
 
     private void setup(SQLiteDatabase up) {
         up.execSQL("DROP TABLE IF EXISTS " + TABLENAME + ";");
-        up.execSQL("CREATE TABLE " + TABLENAME + " (_id INTEGER PRIMARY KEY, completed INTEGER, tousches INTEGER);");
+        up.execSQL("CREATE TABLE " + TABLENAME + " (_id INTEGER PRIMARY KEY, touches INTEGER);");
 
     }
 
@@ -39,14 +39,9 @@ public class DatabaseAccess extends SQLiteOpenHelper {
         return getReadableDatabase().rawQuery("SELECT * FROM " + TABLENAME + ";", null);
     }
 
-    public Cursor getCursor(int id) {
-        return getReadableDatabase().rawQuery("SELECT * FROM " + TABLENAME + " WHERE id = ?", new String[]{id + ""});
-    }
-
-    public boolean addNewEntry(int comp, int touches) {
+    public boolean addNewEntry(int touches) {
         try {
             ContentValues values = new ContentValues();
-            values.put("completed", comp);
             values.put("touches", touches);
             getReadableDatabase().insert(TABLENAME, null, values);
             return true;
