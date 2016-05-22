@@ -7,9 +7,10 @@ import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Looper;
 
-
+/**
+ * Picture worker class - 75% of the code is from the example poster to LJCU
+ */
 public class PictureWorker extends Thread {
-
 
     private ImageViewController imageViewController = ImageViewController.getInstance();
 
@@ -23,6 +24,14 @@ public class PictureWorker extends Thread {
         this.context = context;
     }
 
+    /**
+     * calculates the resample size
+     *
+     * @param options   - options for bitmap
+     * @param reqWidth  - set width
+     * @param reqHeight - set height
+     * @return - returns sample size
+     */
     public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
         final int height = options.outHeight;
         final int width = options.outWidth;
@@ -39,6 +48,15 @@ public class PictureWorker extends Thread {
         return inSampleSize;
     }
 
+    /**
+     * decodes the bitmap and resamples it
+     *
+     * @param res       - resources
+     * @param resId     - resource id for a particular bitmap
+     * @param reqWidth  - set width
+     * @param reqHeight - set height
+     * @return returns the bitmap
+     */
     public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId, int reqWidth, int reqHeight) {
 
         final BitmapFactory.Options options = new BitmapFactory.Options();
@@ -59,27 +77,34 @@ public class PictureWorker extends Thread {
         Looper.loop();
     }
 
-
+    /**
+     * stops the worker
+     */
     public void quit() {
-      looper.quit();
+        looper.quit();
     }
 
+    /**
+     * loads each quarter of the original bitmap and the sample
+     *
+     * @param id     - id of the bitmap to load
+     * @param runner - the thread to run on
+     */
     public void loadResource(final int id, final Handler runner) {
         handler.post(new Runnable() {
             @Override
             public void run() {
                 final Bitmap original = decodeSampledBitmapFromResource(context.getResources(), id, 300, 300);
-                    imageViewController.AddBitmap(0, decodeSampledBitmapFromResource(context.getResources(), id, 50, 60));
-                    imageViewController.AddBitmap(1, Bitmap.createBitmap(original, 0, 0, original.getWidth() / 2, original.getHeight() / 2));
-                    imageViewController.AddBitmap(2, Bitmap.createBitmap(original, original.getWidth() / 2, 0, original.getWidth() / 2, original.getHeight() / 2));
-                    imageViewController.AddBitmap(3, Bitmap.createBitmap(original, 0, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
-                    imageViewController.AddBitmap(4, Bitmap.createBitmap(original, original.getWidth() / 2, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
-                    loaded++;
+                imageViewController.AddBitmap(0, decodeSampledBitmapFromResource(context.getResources(), id, 50, 60));
+                imageViewController.AddBitmap(1, Bitmap.createBitmap(original, 0, 0, original.getWidth() / 2, original.getHeight() / 2));
+                imageViewController.AddBitmap(2, Bitmap.createBitmap(original, original.getWidth() / 2, 0, original.getWidth() / 2, original.getHeight() / 2));
+                imageViewController.AddBitmap(3, Bitmap.createBitmap(original, 0, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
+                imageViewController.AddBitmap(4, Bitmap.createBitmap(original, original.getWidth() / 2, original.getHeight() / 2, original.getWidth() / 2, original.getHeight() / 2));
+                loaded++;
 
                 runner.post(new Runnable() {
                     @Override
                     public void run() {
-                        System.out.println("1");
                         if (loaded == totalImages) {
                             //imageViewController.setInitialBitmaps();
                             ImageViewController.randomiseImages();

@@ -8,12 +8,11 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+/**
+ * statistics activity controller
+ */
 public class StatisticsActivity extends AppCompatActivity {
 
-    private ListView listView;
-    private TextView totalComplete;
-    private TextView numberTouches;
-    private TextView avgTouches;
     private DatabaseAccess database;
 
     @Override
@@ -21,30 +20,33 @@ public class StatisticsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statistics);
 
+        ListView listView = (ListView) findViewById(R.id.listView);
+        TextView totalComplete = (TextView) findViewById(R.id.totalPuzzles);
+        TextView numberTouches = (TextView) findViewById(R.id.totalTouches);
+        TextView avgTouches = (TextView) findViewById(R.id.averageTouches);
+
         database = new DatabaseAccess(this);
-        listView  = (ListView) findViewById(R.id.listView);
-        totalComplete = (TextView) findViewById(R.id.totalPuzzles);
-        numberTouches = (TextView) findViewById(R.id.totalTouches);
-        avgTouches = (TextView) findViewById(R.id.averageTouches);
 
         Cursor cursor = database.getAllCursor();
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
-                R.layout.item_view,
-                cursor,
-                new String[] {"_id", "touches"},
-                new int[] {R.id.id, R.id.touches},
-                0);
-        listView.setAdapter(adapter);
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.item_view, cursor,
+                new String[]{"_id", "touches"}, new int[]{R.id.id, R.id.touches}, 0);
 
-        int totalPuzzlesCompleted = listView.getCount();
-        int totalTouches = 0;
-        while (cursor.moveToNext()) {
-            totalTouches += cursor.getInt(1);
-        }
-        totalComplete.setText(String.format("%d", totalPuzzlesCompleted));
-        numberTouches.setText(String.format("%d", totalTouches));
-        if (totalPuzzlesCompleted > 0) {
-            avgTouches.setText(String.format("%d", totalTouches / totalPuzzlesCompleted));
+        if (listView != null && totalComplete != null && numberTouches != null && avgTouches != null) {
+            listView.setAdapter(adapter);
+
+            int totalPuzzlesCompleted = listView.getCount();
+            int totalTouches = 0;
+
+            while (cursor.moveToNext()) {
+                totalTouches += cursor.getInt(1);
+            }
+
+            //dunno what these warning are about but im not fixing them
+            totalComplete.setText(String.format("%d", totalPuzzlesCompleted));
+            numberTouches.setText(String.format("%d", totalTouches));
+            if (totalPuzzlesCompleted > 0) {
+                avgTouches.setText(String.format("%d", totalTouches / totalPuzzlesCompleted));
+            }
         }
     }
 

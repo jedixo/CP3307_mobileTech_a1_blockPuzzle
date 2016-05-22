@@ -6,18 +6,25 @@ import android.media.SoundPool;
 import android.os.Handler;
 import android.os.Looper;
 
-
+/**
+ * sound system loader / worker
+ */
 public class SoundSystem {
-
-    public int id;
-    public int count;
-    public int MAX_COUNT = 1;
-    public boolean ready = false;
 
     private SoundPool pool;
     private Looper looper;
     private Handler handler;
 
+    private int id;
+    private int count;
+    private int MAX_COUNT = 1;
+    private boolean ready = false;
+
+    /**
+     * initiator of the sound system
+     *
+     * @param context the context
+     */
     public SoundSystem(Context context) {
         pool = new SoundPool(12, AudioManager.STREAM_MUSIC, 0);
 
@@ -33,7 +40,6 @@ public class SoundSystem {
                 }
             }
         });
-
         id = pool.load(context, R.raw.tada, 1);
     }
 
@@ -57,7 +63,10 @@ public class SoundSystem {
         });
     }
 
-
+    /**
+     * looper worker sub class
+     * runs the sound system on a separate thread
+     */
     private class LooperThread extends Thread {
         @Override
         public void run() {

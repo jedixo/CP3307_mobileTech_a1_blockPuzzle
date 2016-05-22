@@ -1,9 +1,6 @@
 package com.example.jake_.cp3307_a1;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.media.AudioManager;
-import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -14,27 +11,33 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+/**
+ * mainActivity controller class
+ */
 public class MainActivity extends AppCompatActivity {
 
+    // objects that help control the puzzle
     private PictureWorker worker;
-    private static DatabaseAccess database;
+    private DatabaseAccess database;
     private SoundSystem soundSystem;
 
+    //resources from the activity XML
     private Button randomButton;
     private int[] drawablesPipes = {R.drawable.pipe1, R.drawable.pipe2, R.drawable.pipe3, R.drawable.pipe4, R.drawable.pipe5, R.drawable.pipe6};
     private int[] drawablesShapes = {R.drawable.shape1, R.drawable.shape2, R.drawable.shape3, R.drawable.shape4, R.drawable.shape5};
     private int[] drawablesPatterns = {R.drawable.patterns1, R.drawable.patterns2, R.drawable.patterns3, R.drawable.patterns4,
             R.drawable.patterns5, R.drawable.patterns6};
 
-    private String theme;
+    //other variables
     private int touches = 0;
 
-
+    /**
+     * initiator
+     */
     public MainActivity() {
         worker = new PictureWorker(this);
         worker.start();
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,56 +45,59 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        randomButton = (Button) findViewById(R.id.randomButton);
-        randomButton.setEnabled(false);
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        //pass this entire array into controller
-        ImageView[] imgViews = {(ImageView) findViewById(R.id.preview), (ImageView) findViewById(R.id.topLeft),
-                (ImageView) findViewById(R.id.topRight), (ImageView) findViewById(R.id.bottomLeft), (ImageView) findViewById(R.id.bottomRight)};
-
+        //sets up objects
         database = new DatabaseAccess(this);
         soundSystem = new SoundSystem(this);
+        randomButton = (Button) findViewById(R.id.randomButton);
 
+        if (randomButton != null) {
+            randomButton.setEnabled(false);
+        }
+
+        //passes imgviews to imageView controller
         Handler handler = new Handler();
+        ImageView[] imgViews = {(ImageView) findViewById(R.id.preview), (ImageView) findViewById(R.id.topLeft),
+                (ImageView) findViewById(R.id.topRight), (ImageView) findViewById(R.id.bottomLeft), (ImageView) findViewById(R.id.bottomRight)};
         ImageViewController.setViews(imgViews);
 
+        //gets the theme and tells picture worker to load images from that theme
         Bundle settingsData = getIntent().getExtras();
         if (settingsData != null) {
-            theme = settingsData.getString("theme");
-        }
+            String theme = settingsData.getString("theme");
 
-        int length;
-        int[] drawables;
-        switch (theme) {
-            case "pipes":
-                length = drawablesPipes.length;
-                drawables = drawablesPipes;
-                break;
-            case "shapes":
-                length = drawablesShapes.length;
-                drawables = drawablesShapes;
-                break;
-            default:
-                length = drawablesPatterns.length;
-                drawables = drawablesPatterns;
-                break;
-        }
+            if (theme != null) {
+                int length;
+                int[] drawables;
+                switch (theme) {
+                    case "pipes":
+                        length = drawablesPipes.length;
+                        drawables = drawablesPipes;
+                        break;
+                    case "shapes":
+                        length = drawablesShapes.length;
+                        drawables = drawablesShapes;
+                        break;
+                    default:
+                        length = drawablesPatterns.length;
+                        drawables = drawablesPatterns;
+                        break;
+                }
 
-        worker.totalImages = length;
-        for (int drawable : drawables) {
-            worker.loadResource(drawable, handler);
+                worker.totalImages = length;
+                for (int drawable : drawables) {
+                    worker.loadResource(drawable, handler);
+                }
+            }
         }
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -103,12 +109,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, StatisticsActivity.class);
                 startActivity(intent);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             //item not selected
         }
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * random buttons callback
+     *
+     * @param view - the view
+     */
     public void Randomize(View view) {
         touches = 0;
         ImageViewController.reset();
@@ -116,6 +127,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * each imageView calls back to this function
+     *
+     * @param view -  the view
+     */
     public void nextImage(View view) {
         touches += 1;
         switch (view.getId()) {
@@ -141,6 +157,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * this plus the singleton image controller is the only way
+     * i could solve my memory leak
+     */
     @Override
     public void onDestroy() {
         super.onDestroy();
