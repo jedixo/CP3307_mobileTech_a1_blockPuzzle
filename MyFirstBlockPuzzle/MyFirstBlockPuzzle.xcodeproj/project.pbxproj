@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB23ABD61CF689C5002CC4E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */; };
+		BB23ABD81CF68A30002CC4E0 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */; };
 		BBC49A541CF1F2120075BE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A531CF1F2120075BE71 /* AppDelegate.swift */; };
-		BBC49A561CF1F2120075BE71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A551CF1F2120075BE71 /* ViewController.swift */; };
+		BBC49A561CF1F2120075BE71 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A551CF1F2120075BE71 /* SettingsViewController.swift */; };
 		BBC49A591CF1F2120075BE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC49A571CF1F2120075BE71 /* Main.storyboard */; };
 		BBC49A5C1CF1F2120075BE71 /* MyFirstBlockPuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A5A1CF1F2120075BE71 /* MyFirstBlockPuzzle.xcdatamodeld */; };
 		BBC49A5E1CF1F2120075BE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC49A5D1CF1F2120075BE71 /* Assets.xcassets */; };
@@ -35,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		BBC49A501CF1F2120075BE71 /* MyFirstBlockPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstBlockPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC49A531CF1F2120075BE71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBC49A551CF1F2120075BE71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBC49A551CF1F2120075BE71 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BBC49A581CF1F2120075BE71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBC49A5B1CF1F2120075BE71 /* MyFirstBlockPuzzle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyFirstBlockPuzzle.xcdatamodel; sourceTree = "<group>"; };
 		BBC49A5D1CF1F2120075BE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				BBC49A531CF1F2120075BE71 /* AppDelegate.swift */,
-				BBC49A551CF1F2120075BE71 /* ViewController.swift */,
+				BBC49A551CF1F2120075BE71 /* SettingsViewController.swift */,
 				BBC49A571CF1F2120075BE71 /* Main.storyboard */,
+				BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */,
+				BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */,
 				BBC49A5D1CF1F2120075BE71 /* Assets.xcassets */,
 				BBC49A5F1CF1F2120075BE71 /* LaunchScreen.storyboard */,
 				BBC49A621CF1F2120075BE71 /* Info.plist */,
@@ -260,8 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC49A5C1CF1F2120075BE71 /* MyFirstBlockPuzzle.xcdatamodeld in Sources */,
-				BBC49A561CF1F2120075BE71 /* ViewController.swift in Sources */,
+				BB23ABD81CF68A30002CC4E0 /* StatisticsViewController.swift in Sources */,
+				BBC49A561CF1F2120075BE71 /* SettingsViewController.swift in Sources */,
 				BBC49A541CF1F2120075BE71 /* AppDelegate.swift in Sources */,
+				BB23ABD61CF689C5002CC4E0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +494,7 @@
 				BBC49A7D1CF1F2120075BE71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBC49A7E1CF1F2120075BE71 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				BBC49A801CF1F2120075BE71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBC49A811CF1F2120075BE71 /* Build configuration list for PBXNativeTarget "MyFirstBlockPuzzleUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				BBC49A831CF1F2120075BE71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
