@@ -15,7 +15,20 @@ class SettingsViewController: UIViewController {
 
 
     @IBAction func switchChanged(sender: AnyObject) {
-        print("wrks")
+        if (sender as! NSObject == pipeSwitch && sender.on) {
+            shapeSwitch.on = false;
+            patternSwitch.on = false;
+        } else if (sender as! NSObject == shapeSwitch && sender.on) {
+            pipeSwitch.on = false;
+            patternSwitch.on = false;
+        } else if (sender as! NSObject == patternSwitch && sender.on){
+            pipeSwitch.on = false;
+            shapeSwitch.on = false;
+        } else {
+            pipeSwitch.on = true;
+            shapeSwitch.on = false;
+            patternSwitch.on = false;
+        }
     }
 
     override func viewDidLoad() {
