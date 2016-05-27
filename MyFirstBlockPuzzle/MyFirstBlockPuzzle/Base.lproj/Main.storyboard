@@ -46,7 +46,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjX-b2-pz6">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mnc-eY-gKJ"/>
+                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mRI-KE-avO"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -63,7 +63,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-Vc-bUH">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NNy-Ta-J2G"/>
+                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CjL-gG-c4O"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -80,7 +80,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-UG-SiS">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6sS-Si-bLe"/>
+                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GyU-H7-4Fg"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -102,10 +102,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="patternSwitch" destination="9UU-UG-SiS" id="qYN-tu-HkJ"/>
-                        <outlet property="pipeSwitch" destination="pjX-b2-pz6" id="dks-L4-bKS"/>
-                        <outlet property="shapeSwitch" destination="2Dn-Vc-bUH" id="Zb1-HQ-lDt"/>
-                        <outlet property="shapeSwith" destination="2Dn-Vc-bUH" id="j1l-46-O02"/>
+                        <outlet property="patternSwitch" destination="9UU-UG-SiS" id="Lwz-Wy-6Ll"/>
+                        <outlet property="pipeSwitch" destination="pjX-b2-pz6" id="MRH-NP-Xpa"/>
+                        <outlet property="shapeSwitch" destination="2Dn-Vc-bUH" id="1Ay-GV-OI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,8 +10,9 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     @IBOutlet weak var pipeSwitch: UISwitch!
-    @IBOutlet weak var shapeSwith: UISwitch!
+    @IBOutlet weak var shapeSwitch: UISwitch!
     @IBOutlet weak var patternSwitch: UISwitch!
+
 
     @IBAction func switchChanged(sender: AnyObject) {
         print("wrks")
