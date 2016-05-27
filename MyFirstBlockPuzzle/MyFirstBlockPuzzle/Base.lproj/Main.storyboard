@@ -45,9 +45,6 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjX-b2-pz6">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mRI-KE-avO"/>
-                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -62,9 +59,6 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-Vc-bUH">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CjL-gG-c4O"/>
-                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -79,9 +73,6 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-UG-SiS">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GyU-H7-4Fg"/>
-                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -102,7 +93,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="patternSwitch" destination="9UU-UG-SiS" id="Lwz-Wy-6Ll"/>
                         <outlet property="pipeSwitch" destination="pjX-b2-pz6" id="MRH-NP-Xpa"/>
                         <outlet property="shapeSwitch" destination="2Dn-Vc-bUH" id="1Ay-GV-OI5"/>
                     </connections>
@@ -151,6 +141,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adR-lK-Ayu">
                                 <rect key="frame" x="277" y="550" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="randomButton:" destination="ovx-pi-oc0" eventType="touchUpInside" id="27q-dO-qYf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3J-hJ-Lt3">
                                 <rect key="frame" x="0.0" y="303" width="301" height="240"/>
@@ -183,6 +176,12 @@
                             <constraint firstItem="L3J-hJ-Lt3" firstAttribute="top" secondItem="w6S-gm-Pnb" secondAttribute="top" id="ydJ-T8-SwQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomLeft" destination="L3J-hJ-Lt3" id="7OL-32-QVe"/>
+                        <outlet property="bottomRight" destination="w6S-gm-Pnb" id="4br-cR-wxo"/>
+                        <outlet property="topLeft" destination="WuG-ai-g4b" id="LcW-FY-DxD"/>
+                        <outlet property="topRight" destination="vTb-6a-qKj" id="0v8-kU-pQN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dF-hR-fzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

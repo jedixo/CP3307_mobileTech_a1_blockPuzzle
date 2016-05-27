@@ -9,11 +9,19 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    @IBOutlet weak var topLeft: UIImageView!
+    @IBOutlet weak var topRight: UIImageView!
+    @IBOutlet weak var bottomRight: UIImageView!
+    @IBOutlet weak var bottomLeft: UIImageView!
 
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
+    super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func randomButton(sender: AnyObject) {
     }
 
     override func didReceiveMemoryWarning() {

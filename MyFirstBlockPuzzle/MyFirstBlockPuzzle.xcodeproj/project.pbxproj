@@ -17,6 +17,23 @@
 		BBC49A611CF1F2120075BE71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC49A5F1CF1F2120075BE71 /* LaunchScreen.storyboard */; };
 		BBC49A6C1CF1F2120075BE71 /* MyFirstBlockPuzzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A6B1CF1F2120075BE71 /* MyFirstBlockPuzzleTests.swift */; };
 		BBC49A771CF1F2120075BE71 /* MyFirstBlockPuzzleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A761CF1F2120075BE71 /* MyFirstBlockPuzzleUITests.swift */; };
+		BBEC41D01CF814A300CFB443 /* patterns1.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41BF1CF814A300CFB443 /* patterns1.png */; };
+		BBEC41D11CF814A300CFB443 /* patterns2.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C01CF814A300CFB443 /* patterns2.png */; };
+		BBEC41D21CF814A300CFB443 /* patterns3.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C11CF814A300CFB443 /* patterns3.png */; };
+		BBEC41D31CF814A300CFB443 /* patterns4.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C21CF814A300CFB443 /* patterns4.png */; };
+		BBEC41D41CF814A300CFB443 /* patterns5.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C31CF814A300CFB443 /* patterns5.png */; };
+		BBEC41D51CF814A300CFB443 /* patterns6.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C41CF814A300CFB443 /* patterns6.png */; };
+		BBEC41D61CF814A300CFB443 /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C51CF814A300CFB443 /* pipe1.png */; };
+		BBEC41D71CF814A300CFB443 /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C61CF814A300CFB443 /* pipe2.png */; };
+		BBEC41D81CF814A300CFB443 /* pipe3.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C71CF814A300CFB443 /* pipe3.png */; };
+		BBEC41D91CF814A300CFB443 /* pipe4.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C81CF814A300CFB443 /* pipe4.png */; };
+		BBEC41DA1CF814A300CFB443 /* pipe5.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41C91CF814A300CFB443 /* pipe5.png */; };
+		BBEC41DB1CF814A300CFB443 /* pipe6.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41CA1CF814A300CFB443 /* pipe6.png */; };
+		BBEC41DC1CF814A300CFB443 /* shape1.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41CB1CF814A300CFB443 /* shape1.png */; };
+		BBEC41DD1CF814A300CFB443 /* shape2.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41CC1CF814A300CFB443 /* shape2.png */; };
+		BBEC41DE1CF814A300CFB443 /* shape3.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41CD1CF814A300CFB443 /* shape3.png */; };
+		BBEC41DF1CF814A300CFB443 /* shape4.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41CE1CF814A300CFB443 /* shape4.png */; };
+		BBEC41E01CF814A300CFB443 /* shape5.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEC41CF1CF814A300CFB443 /* shape5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +70,23 @@
 		BBC49A721CF1F2120075BE71 /* MyFirstBlockPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstBlockPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC49A761CF1F2120075BE71 /* MyFirstBlockPuzzleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstBlockPuzzleUITests.swift; sourceTree = "<group>"; };
 		BBC49A781CF1F2120075BE71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBEC41BF1CF814A300CFB443 /* patterns1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patterns1.png; path = ../../app/src/main/res/drawable/patterns1.png; sourceTree = "<group>"; };
+		BBEC41C01CF814A300CFB443 /* patterns2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patterns2.png; path = ../../app/src/main/res/drawable/patterns2.png; sourceTree = "<group>"; };
+		BBEC41C11CF814A300CFB443 /* patterns3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patterns3.png; path = ../../app/src/main/res/drawable/patterns3.png; sourceTree = "<group>"; };
+		BBEC41C21CF814A300CFB443 /* patterns4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patterns4.png; path = ../../app/src/main/res/drawable/patterns4.png; sourceTree = "<group>"; };
+		BBEC41C31CF814A300CFB443 /* patterns5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patterns5.png; path = ../../app/src/main/res/drawable/patterns5.png; sourceTree = "<group>"; };
+		BBEC41C41CF814A300CFB443 /* patterns6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patterns6.png; path = ../../app/src/main/res/drawable/patterns6.png; sourceTree = "<group>"; };
+		BBEC41C51CF814A300CFB443 /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipe1.png; path = ../../app/src/main/res/drawable/pipe1.png; sourceTree = "<group>"; };
+		BBEC41C61CF814A300CFB443 /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipe2.png; path = ../../app/src/main/res/drawable/pipe2.png; sourceTree = "<group>"; };
+		BBEC41C71CF814A300CFB443 /* pipe3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipe3.png; path = ../../app/src/main/res/drawable/pipe3.png; sourceTree = "<group>"; };
+		BBEC41C81CF814A300CFB443 /* pipe4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipe4.png; path = ../../app/src/main/res/drawable/pipe4.png; sourceTree = "<group>"; };
+		BBEC41C91CF814A300CFB443 /* pipe5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipe5.png; path = ../../app/src/main/res/drawable/pipe5.png; sourceTree = "<group>"; };
+		BBEC41CA1CF814A300CFB443 /* pipe6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipe6.png; path = ../../app/src/main/res/drawable/pipe6.png; sourceTree = "<group>"; };
+		BBEC41CB1CF814A300CFB443 /* shape1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shape1.png; path = ../../app/src/main/res/drawable/shape1.png; sourceTree = "<group>"; };
+		BBEC41CC1CF814A300CFB443 /* shape2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shape2.png; path = ../../app/src/main/res/drawable/shape2.png; sourceTree = "<group>"; };
+		BBEC41CD1CF814A300CFB443 /* shape3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shape3.png; path = ../../app/src/main/res/drawable/shape3.png; sourceTree = "<group>"; };
+		BBEC41CE1CF814A300CFB443 /* shape4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shape4.png; path = ../../app/src/main/res/drawable/shape4.png; sourceTree = "<group>"; };
+		BBEC41CF1CF814A300CFB443 /* shape5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shape5.png; path = ../../app/src/main/res/drawable/shape5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +137,23 @@
 		BBC49A521CF1F2120075BE71 /* MyFirstBlockPuzzle */ = {
 			isa = PBXGroup;
 			children = (
+				BBEC41BF1CF814A300CFB443 /* patterns1.png */,
+				BBEC41C01CF814A300CFB443 /* patterns2.png */,
+				BBEC41C11CF814A300CFB443 /* patterns3.png */,
+				BBEC41C21CF814A300CFB443 /* patterns4.png */,
+				BBEC41C31CF814A300CFB443 /* patterns5.png */,
+				BBEC41C41CF814A300CFB443 /* patterns6.png */,
+				BBEC41C51CF814A300CFB443 /* pipe1.png */,
+				BBEC41C61CF814A300CFB443 /* pipe2.png */,
+				BBEC41C71CF814A300CFB443 /* pipe3.png */,
+				BBEC41C81CF814A300CFB443 /* pipe4.png */,
+				BBEC41C91CF814A300CFB443 /* pipe5.png */,
+				BBEC41CA1CF814A300CFB443 /* pipe6.png */,
+				BBEC41CB1CF814A300CFB443 /* shape1.png */,
+				BBEC41CC1CF814A300CFB443 /* shape2.png */,
+				BBEC41CD1CF814A300CFB443 /* shape3.png */,
+				BBEC41CE1CF814A300CFB443 /* shape4.png */,
+				BBEC41CF1CF814A300CFB443 /* shape5.png */,
 				BBC49A531CF1F2120075BE71 /* AppDelegate.swift */,
 				BBC49A551CF1F2120075BE71 /* SettingsViewController.swift */,
 				BBC49A571CF1F2120075BE71 /* Main.storyboard */,
@@ -239,8 +290,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC49A611CF1F2120075BE71 /* LaunchScreen.storyboard in Resources */,
+				BBEC41D61CF814A300CFB443 /* pipe1.png in Resources */,
 				BBC49A5E1CF1F2120075BE71 /* Assets.xcassets in Resources */,
+				BBEC41DE1CF814A300CFB443 /* shape3.png in Resources */,
+				BBEC41D01CF814A300CFB443 /* patterns1.png in Resources */,
+				BBEC41D11CF814A300CFB443 /* patterns2.png in Resources */,
+				BBEC41D81CF814A300CFB443 /* pipe3.png in Resources */,
+				BBEC41D21CF814A300CFB443 /* patterns3.png in Resources */,
+				BBEC41DD1CF814A300CFB443 /* shape2.png in Resources */,
+				BBEC41DA1CF814A300CFB443 /* pipe5.png in Resources */,
+				BBEC41D31CF814A300CFB443 /* patterns4.png in Resources */,
+				BBEC41D41CF814A300CFB443 /* patterns5.png in Resources */,
+				BBEC41D91CF814A300CFB443 /* pipe4.png in Resources */,
+				BBEC41DB1CF814A300CFB443 /* pipe6.png in Resources */,
+				BBEC41DF1CF814A300CFB443 /* shape4.png in Resources */,
+				BBEC41E01CF814A300CFB443 /* shape5.png in Resources */,
+				BBEC41D71CF814A300CFB443 /* pipe2.png in Resources */,
+				BBEC41D51CF814A300CFB443 /* patterns6.png in Resources */,
 				BBC49A591CF1F2120075BE71 /* Main.storyboard in Resources */,
+				BBEC41DC1CF814A300CFB443 /* shape1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
