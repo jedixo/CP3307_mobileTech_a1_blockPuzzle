@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
         
         topLeft.image = UIImage(named: "pipe1")
+        topRight.image = UIImage(named: "pipe2")
         // Do any additional setup after loading the view.
     }
     @IBAction func randomButton(sender: AnyObject) {
