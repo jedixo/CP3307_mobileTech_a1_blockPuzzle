@@ -18,7 +18,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         
     super.viewDidLoad()
-
+        
+        topLeft.image = UIImage(named: "pipe1")
         // Do any additional setup after loading the view.
     }
     @IBAction func randomButton(sender: AnyObject) {
