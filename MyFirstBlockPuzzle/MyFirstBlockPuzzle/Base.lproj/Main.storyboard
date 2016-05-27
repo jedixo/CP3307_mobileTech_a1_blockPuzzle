@@ -45,6 +45,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjX-b2-pz6">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mnc-eY-gKJ"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -59,6 +62,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-Vc-bUH">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NNy-Ta-J2G"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -73,6 +79,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-UG-SiS">
                                                 <rect key="frame" x="65" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6sS-Si-bLe"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -92,6 +101,12 @@
                             <constraint firstAttribute="bottom" secondItem="5c0-3V-uOv" secondAttribute="bottom" constant="20" symbolic="YES" id="vYQ-LD-Gzd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="patternSwitch" destination="9UU-UG-SiS" id="qYN-tu-HkJ"/>
+                        <outlet property="pipeSwitch" destination="pjX-b2-pz6" id="dks-L4-bKS"/>
+                        <outlet property="shapeSwitch" destination="2Dn-Vc-bUH" id="Zb1-HQ-lDt"/>
+                        <outlet property="shapeSwith" destination="2Dn-Vc-bUH" id="j1l-46-O02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
