@@ -13,12 +13,9 @@ class MainViewController: UIViewController {
     @IBOutlet var imgViews: [UIImageView]!
     var images: [[String]] = [["pipe1", "pipe2", "pipe3", "pipe4", "pipe5", "pipe6"], ["shape1","shape2","shape3","shape4","shape5"],
                               ["patterns1","patterns2","patterns3","patterns4","patterns5","patterns6"]]
-    
     var theme: UInt32 = 0
     var currentImg: [UInt32] = [0,0,0,0]
     var target: UInt32 = 0
-    
-    var test: UInt32 = 0
     
     /**
      * Main Logic
@@ -73,41 +70,52 @@ class MainViewController: UIViewController {
     
     /**
      * nextImg - gets the next image of an ImageView
+     *
+     * @param event - the event that is created when a view is pressed
      */
     func nextImg(event: AnyObject?) {
         
         if (event?.view == imgViews[0]) {
             let view = imgViews[0]
             currentImg[0] += 1
+            
             if (currentImg[0] == UInt32(images[Int(theme)].count)) {
                 currentImg[0] = 0
             }
+            
             view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[0])])!, section: 0)
+            
         } else if (event?.view == imgViews[1]) {
             let view = imgViews[1]
             currentImg[1] += 1
+            
             if (currentImg[1] == UInt32(images[Int(theme)].count)) {
                 currentImg[1] = 0
             }
+            
             view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[1])])!, section: 1)
             
         } else if (event?.view == imgViews[2]) {
             let view = imgViews[2]
             currentImg[2] += 1
+            
             if (currentImg[2] == UInt32(images[Int(theme)].count)) {
                 currentImg[2] = 0
             }
+            
             view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[2])])!, section: 2)
             
         } else if (event?.view == imgViews[3]) {
             let view = imgViews[3]
             currentImg[3] += 1
+            
             if (currentImg[3] == UInt32(images[Int(theme)].count)) {
                 currentImg[3] = 0
             }
-            view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[3])])!, section: 3)
             
+            view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[3])])!, section: 3)
         }
+        //check if game is won here
     }
     
     /**
@@ -163,5 +171,7 @@ class MainViewController: UIViewController {
         let randomNumber = arc4random_uniform(upper - lower) + lower
         
         return randomNumber
+    }
+    @IBAction func RandomButton(sender: AnyObject) {
     }
 }

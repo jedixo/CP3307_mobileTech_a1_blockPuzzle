@@ -152,7 +152,7 @@
                                 <rect key="frame" x="277" y="550" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="randomButton:" destination="ovx-pi-oc0" eventType="touchUpInside" id="27q-dO-qYf"/>
+                                    <action selector="RandomButton:" destination="ovx-pi-oc0" eventType="touchUpInside" id="wIb-QG-epS"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3J-hJ-Lt3">
