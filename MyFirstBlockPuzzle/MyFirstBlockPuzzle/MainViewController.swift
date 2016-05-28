@@ -9,17 +9,31 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet var imgViews: [UIImageView]!
     
+    @IBOutlet var imgViews: [UIImageView]!
     var images: [[String]] = [["pipe1", "pipe2", "pipe3", "pipe4", "pipe5", "pipe6"], ["shape1","shape2","shape3","shape4","shape5"],
                               ["patterns1","patterns2","patterns3","patterns4","patterns5","patterns6"]]
+    
+    var theme: UInt32 = 0
+    var currentImg: [Int] = [0,0,0,0]
+    var target: UInt32 = 0
     
     override func viewDidLoad() {
         
     super.viewDidLoad()
+        
         print(images)
         print(imgViews)
-
+        
+        //select theme
+    
+        //select target
+        target = getRandomIndex(UInt32(images[Int(theme)].count))
+        print(target)
+        
+        //generate images and select random image here
+        
+        //sets up the imgViews and add image here
         for (i, view) in imgViews.enumerate() {
             let index = i + 0 as integer_t
             view.image = splitImage(UIImage(named: "pipe1")!, section: index)
@@ -72,12 +86,18 @@ class MainViewController: UIViewController {
             imgHeight = img.size.height
         }
         
-
-        
-        
         let leftImgFrame = CGRectMake(imgstartw, imgstarth, imgWidth, imgHeight);
         let left = CGImageCreateWithImageInRect(img.CGImage, leftImgFrame);
         
         return UIImage(CGImage:left!)
+    }
+    
+    func getRandomIndex(index: UInt32) -> UInt32 {
+        let lower : UInt32 = 1
+        let upper : UInt32 = index
+        
+        let randomNumber = arc4random_uniform(upper - lower) + lower
+        
+        return randomNumber
     }
 }
