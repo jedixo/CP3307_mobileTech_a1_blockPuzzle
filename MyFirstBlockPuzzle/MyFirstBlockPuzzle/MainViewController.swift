@@ -38,10 +38,20 @@ class MainViewController: UIViewController {
         
         
         
-        let newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
+        var newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
         topLeft.userInteractionEnabled = true
         topLeft.addGestureRecognizer(newTap)
+        newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
+        topRight.userInteractionEnabled = true
+        topRight.addGestureRecognizer(newTap)
+        newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
+        bottomLeft.userInteractionEnabled = true
+        bottomLeft.addGestureRecognizer(newTap)
+        newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
 
+        bottomRight.userInteractionEnabled = true
+        bottomRight.addGestureRecognizer(newTap)
+        
         
     }
     
