@@ -125,17 +125,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WuG-ai-g4b">
-                                <rect key="frame" x="0.0" y="64" width="301" height="242"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuG-ai-g4b">
+                                <rect key="frame" x="0.0" y="64" width="184" height="242"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="242" id="N7X-OF-cRF"/>
-                                    <constraint firstAttribute="width" constant="301" id="Zk2-U0-uCn"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="242" id="N7X-OF-cRF"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="301" id="Zk2-U0-uCn"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vTb-6a-qKj">
-                                <rect key="frame" x="299" y="64" width="301" height="242"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTb-6a-qKj">
+                                <rect key="frame" x="416" y="64" width="184" height="242"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="301" id="2Wn-Tb-0Gb"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="301" id="2Wn-Tb-0Gb"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adR-lK-Ayu">
@@ -145,13 +145,18 @@
                                     <action selector="randomButton:" destination="ovx-pi-oc0" eventType="touchUpInside" id="27q-dO-qYf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3J-hJ-Lt3">
-                                <rect key="frame" x="0.0" y="303" width="301" height="240"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w6S-gm-Pnb">
-                                <rect key="frame" x="299" y="303" width="301" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3J-hJ-Lt3">
+                                <rect key="frame" x="0.0" y="303" width="184" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="47G-Jg-10e"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="LGP-jP-yCm"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="301" id="WD3-wI-rSs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w6S-gm-Pnb">
+                                <rect key="frame" x="416" y="303" width="184" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="47G-Jg-10e"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="301" id="xJF-Xm-64d"/>
                                 </constraints>
                             </imageView>
                         </subviews>

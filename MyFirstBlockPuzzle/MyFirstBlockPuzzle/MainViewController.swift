@@ -19,14 +19,40 @@ class MainViewController: UIViewController {
         
     super.viewDidLoad()
         
+        
+        
         //testimg images
-        topLeft.image = UIImage(named: "pipe1")
-        topRight.image = UIImage(named: "pipe2")
-        bottomLeft.image = UIImage(named: "pipe3")
-        bottomRight.image = UIImage(named: "pipe4")
+        topLeft.image = scaleImage("pipe1")
+        topLeft.clipsToBounds = true
+        topLeft.contentMode = .ScaleAspectFit
+        topRight.image = scaleImage("pipe2")
+        topRight.clipsToBounds = true
+        topRight.contentMode = .ScaleAspectFit
+        bottomLeft.image = scaleImage("pipe3")
+        bottomLeft.clipsToBounds = true
+        bottomLeft.contentMode = .ScaleAspectFit
+        bottomRight.image = scaleImage("pipe4")
+        bottomRight.clipsToBounds = true
+        bottomRight.contentMode = .ScaleAspectFit
         // Do any additional setup after loading the view.
     }
     @IBAction func randomButton(sender: AnyObject) {
+    }
+    
+    func scaleImage(imgName: String) -> UIImage {
+        let image = UIImage(named: imgName)
+        
+        let size = CGSizeApplyAffineTransform(image!.size, CGAffineTransformMakeScale(0.5, 0.5))
+        let hasAlpha = false
+        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+        image!.drawInRect(CGRect(origin: CGPointZero, size: size))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return scaledImage
+
     }
 
     override func didReceiveMemoryWarning() {
