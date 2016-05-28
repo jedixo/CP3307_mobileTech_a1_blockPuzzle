@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
                               ["patterns1","patterns2","patterns3","patterns4","patterns5","patterns6"]]
     
     var theme: UInt32 = 0
-    var currentImg: [Int] = [0,0,0,0]
+    var currentImg: [UInt32] = [0,0,0,0]
     var target: UInt32 = 0
     
     override func viewDidLoad() {
@@ -29,14 +29,13 @@ class MainViewController: UIViewController {
     
         //select target
         target = getRandomIndex(UInt32(images[Int(theme)].count))
-        print(target)
         
-        //generate images and select random image here
-        
-        //sets up the imgViews and add image here
+        //sets up the imgViews and randomizes images
         for (i, view) in imgViews.enumerate() {
-            let index = i + 0 as integer_t
-            view.image = splitImage(UIImage(named: "pipe1")!, section: index)
+            let index = i
+            let randomIndex = getRandomIndex(UInt32(images[Int(theme)].count))
+            currentImg[index] = randomIndex
+            view.image = splitImage(UIImage(named: images[Int(theme)][Int(randomIndex)])!, section: index)
             addListener(view)
         }
     }
@@ -62,7 +61,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func splitImage(img: UIImage, section: integer_t) -> UIImage {
+    func splitImage(img: UIImage, section: Int) -> UIImage {
         var imgstartw = 0 as CGFloat
         var imgstarth = 0 as CGFloat
         var imgWidth  = 0 as CGFloat
@@ -99,5 +98,12 @@ class MainViewController: UIViewController {
         let randomNumber = arc4random_uniform(upper - lower) + lower
         
         return randomNumber
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (sender is UIBarButtonItem) {
+            let controller = (segue.destinationViewController as! SettingsViewController)
+            controller.theme = theme
+        }
     }
 }

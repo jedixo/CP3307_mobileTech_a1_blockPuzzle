@@ -129,7 +129,7 @@
                                     <navigationItem title="My First Block Puzzle" id="25h-xV-mEM">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="reply" id="IfM-Iu-EEb">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="ift-39-S49"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="Xvo-Ey-wme"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
