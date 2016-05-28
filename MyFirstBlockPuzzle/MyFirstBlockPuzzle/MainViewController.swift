@@ -18,52 +18,67 @@ class MainViewController: UIViewController {
     var currentImg: [UInt32] = [0,0,0,0]
     var target: UInt32 = 0
     
+    /**
+     * Main Logic
+     */
     override func viewDidLoad() {
         
-    super.viewDidLoad()
+        super.viewDidLoad()
         
-        print(images)
-        print(imgViews)
-        
-        //select theme
-    
         //select target
         target = getRandomIndex(UInt32(images[Int(theme)].count))
         
         //sets up the imgViews and randomizes images
         for (i, view) in imgViews.enumerate() {
-            let index = i
+            
             let randomIndex = getRandomIndex(UInt32(images[Int(theme)].count))
-            currentImg[index] = randomIndex
-            view.image = splitImage(UIImage(named: images[Int(theme)][Int(randomIndex)])!, section: index)
+            currentImg[i] = randomIndex
+            
+            view.image = splitImage(UIImage(named: images[Int(theme)][Int(randomIndex)])!, section: i)
             addListener(view)
         }
     }
     
-    
-    func addListener(imgView: UIImageView) {
-        let newListener = UITapGestureRecognizer(target: self, action: #selector(self.listenerMethod))
-        imgView.userInteractionEnabled = true
-        imgView.addGestureRecognizer(newListener)
-    }
-    
-    func listenerMethod() {
-        print("listening")
-    }
-    
-    
-    
-    @IBAction func randomButton(sender: AnyObject) {
-    }
-
+    /**
+     * A self generated overidden method for disposing of obects
+     */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     /**
-     * splitImage function - splits an initial image into quarters
+     * this overidden function passes the current thee back to the settings controller
+     * this is done just for the asthetics of the theme not changing to the default
+     */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (sender is UIBarButtonItem) {
+            let controller = (segue.destinationViewController as! SettingsViewController)
+            controller.theme = theme
+        }
+    }
+    
+    /**
+     * addListener - adds a touch listener to an imgView
      * 
+     * @param imgView - the target imageView for a listener
+     */
+    func addListener(imgView: UIImageView) {
+        let newListener = UITapGestureRecognizer(target: self, action: #selector(self.listenerMethod))
+        imgView.userInteractionEnabled = true
+        imgView.addGestureRecognizer(newListener)
+    }
+    
+    /**
+     *
+     */
+    func listenerMethod() {
+        print("listening")
+    }
+    
+    /**
+     * splitImage function - splits an initial image into quarters
+     *
      * solution from (http://stackoverflow.com/questions/10661291/split-uiimage-in-half)
      * conveted from Obj-c to swift by Jake Dixon (mes)
      *
@@ -101,6 +116,12 @@ class MainViewController: UIViewController {
         return UIImage(CGImage:left!)
     }
     
+    /**
+     * getRandomIndex - gets a random integer between 0 and a max number - 1
+     *
+     * @param index - the max number in an array count for example
+     * @return UInt32 - an int between 0 and index-1
+     */
     func getRandomIndex(index: UInt32) -> UInt32 {
         let lower : UInt32 = 1
         let upper : UInt32 = index
@@ -108,12 +129,5 @@ class MainViewController: UIViewController {
         let randomNumber = arc4random_uniform(upper - lower) + lower
         
         return randomNumber
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (sender is UIBarButtonItem) {
-            let controller = (segue.destinationViewController as! SettingsViewController)
-            controller.theme = theme
-        }
     }
 }
