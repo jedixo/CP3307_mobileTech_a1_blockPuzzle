@@ -35,7 +35,22 @@ class MainViewController: UIViewController {
         bottomRight.clipsToBounds = true
         bottomRight.contentMode = .ScaleAspectFit
         // Do any additional setup after loading the view.
+        
+        
+        
+        let newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
+        topLeft.userInteractionEnabled = true
+        topLeft.addGestureRecognizer(newTap)
+
+        
     }
+    
+    func myTapMethod() {
+        print("test")
+    }
+    
+    
+    
     @IBAction func randomButton(sender: AnyObject) {
     }
     
@@ -92,6 +107,8 @@ class MainViewController: UIViewController {
         
         return UIImage(CGImage:left!)
     }
+    
+    
     
     
     
