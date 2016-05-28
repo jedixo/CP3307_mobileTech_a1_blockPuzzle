@@ -24,18 +24,8 @@ class MainViewController: UIViewController {
         
         super.viewDidLoad()
         
-        //select target
-        target = getRandomIndex(UInt32(images[Int(theme)].count))
-        
-        //sets up the imgViews and randomizes images
-        for (i, view) in imgViews.enumerate() {
-            
-            let randomIndex = getRandomIndex(UInt32(images[Int(theme)].count))
-            currentImg[i] = randomIndex
-            
-            view.image = splitImage(UIImage(named: images[Int(theme)][Int(randomIndex)])!, section: i)
-            addListener(view)
-        }
+        //sets up the game
+        reset()
     }
     
     /**
@@ -54,6 +44,24 @@ class MainViewController: UIViewController {
         if (sender is UIBarButtonItem) {
             let controller = (segue.destinationViewController as! SettingsViewController)
             controller.theme = theme
+        }
+    }
+    
+    /**
+     * reset - Resets / sets up the imageViews
+     */
+    func reset() {
+        //select target
+        target = getRandomIndex(UInt32(images[Int(theme)].count))
+        
+        //sets up the imgViews and randomizes images
+        for (i, view) in imgViews.enumerate() {
+            
+            let randomIndex = getRandomIndex(UInt32(images[Int(theme)].count))
+            currentImg[i] = randomIndex
+            
+            view.image = splitImage(UIImage(named: images[Int(theme)][Int(randomIndex)])!, section: i)
+            addListener(view)
         }
     }
     
@@ -172,6 +180,9 @@ class MainViewController: UIViewController {
         
         return randomNumber
     }
-    @IBAction func RandomButton(sender: AnyObject) {
+
+
+    @IBAction func randomButton(sender: AnyObject) {
+        reset()
     }
 }
