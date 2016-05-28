@@ -192,6 +192,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="randButton" destination="adR-lK-Ayu" id="380-GL-b5O"/>
                         <outletCollection property="imgViews" destination="WuG-ai-g4b" collectionClass="NSMutableArray" id="upg-jM-2GC"/>
                         <outletCollection property="imgViews" destination="vTb-6a-qKj" collectionClass="NSMutableArray" id="pTb-CM-N6y"/>
                         <outletCollection property="imgViews" destination="L3J-hJ-Lt3" collectionClass="NSMutableArray" id="dKi-gs-eBO"/>
