@@ -182,10 +182,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bottomLeft" destination="L3J-hJ-Lt3" id="7OL-32-QVe"/>
-                        <outlet property="bottomRight" destination="w6S-gm-Pnb" id="4br-cR-wxo"/>
-                        <outlet property="topLeft" destination="WuG-ai-g4b" id="LcW-FY-DxD"/>
-                        <outlet property="topRight" destination="vTb-6a-qKj" id="0v8-kU-pQN"/>
+                        <outletCollection property="imgViews" destination="WuG-ai-g4b" collectionClass="NSMutableArray" id="upg-jM-2GC"/>
+                        <outletCollection property="imgViews" destination="vTb-6a-qKj" collectionClass="NSMutableArray" id="pTb-CM-N6y"/>
+                        <outletCollection property="imgViews" destination="L3J-hJ-Lt3" collectionClass="NSMutableArray" id="dKi-gs-eBO"/>
+                        <outletCollection property="imgViews" destination="w6S-gm-Pnb" collectionClass="NSMutableArray" id="mjz-r5-x3P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dF-hR-fzt" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,24 +9,37 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var topLeft: UIImageView!
-    @IBOutlet weak var topRight: UIImageView!
-    @IBOutlet weak var bottomRight: UIImageView!
-    @IBOutlet weak var bottomLeft: UIImageView!
-
+   // @IBOutlet weak var topLeft: UIImageView!
+   // @IBOutlet weak var topRight: UIImageView!
+   // @IBOutlet weak var bottomRight: UIImageView!
+   // @IBOutlet weak var bottomLeft: UIImageView!
+    
+   // @IBOutlet var imgviews = [UIImageView]()
+    @IBOutlet var imgViews: [UIImageView]!
+    
+    var images: [[String]] = [["pipe1", "pipe2", "pipe3", "pipe4", "pipe5", "pipe6"], ["shape1","shape2","shape3","shape4","shape5"],
+                              ["patterns1","patterns2","patterns3","patterns4","patterns5","patterns6"]]
     
     override func viewDidLoad() {
         
     super.viewDidLoad()
+        print(images)
+        print(imgViews)
+        //for (index, value) in shoppingList.enumerate()
+        for (i, view) in imgViews.enumerate() {
+            let index = i + 0 as integer_t
+            view.image = splitImage(UIImage(named: "pipe1")!, section: index)
+        }
         
+        //imgViews[0].image = splitImage(UIImage(named: "pipe2")!, section: 0)
         
-        
+        /**
         //testimg images
-        topLeft.image = splitImage(UIImage(named: "pipe1")!, section: 0)
-        topLeft.clipsToBounds = true
-        topLeft.contentMode = .ScaleAspectFit
-        topRight.image = splitImage(UIImage(named: "pipe1")!, section: 1)
-        topRight.clipsToBounds = true
+        //topLeft.image = splitImage(UIImage(named: "pipe1")!, section: 0)
+        //topLeft.clipsToBounds = true
+        //topLeft.contentMode = .ScaleAspectFit
+        //topRight.image = splitImage(UIImage(named: "pipe1")!, section: 1)
+        //topRight.clipsToBounds = true
         topRight.contentMode = .ScaleAspectFit
         bottomLeft.image = splitImage(UIImage(named: "pipe1")!, section: 2)
         bottomLeft.clipsToBounds = true
@@ -37,26 +50,22 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        
-        var newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
-        topLeft.userInteractionEnabled = true
-        topLeft.addGestureRecognizer(newTap)
-        newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
-        topRight.userInteractionEnabled = true
-        topRight.addGestureRecognizer(newTap)
-        newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
-        bottomLeft.userInteractionEnabled = true
-        bottomLeft.addGestureRecognizer(newTap)
-        newTap = UITapGestureRecognizer(target: self, action: #selector(MainViewController.myTapMethod))
-
-        bottomRight.userInteractionEnabled = true
-        bottomRight.addGestureRecognizer(newTap)
-        
+        addListener(topLeft)
+        addListener(topRight)
+        addListener(bottomLeft)
+        addListener(bottomRight)*/
         
     }
     
-    func myTapMethod() {
-        print("test")
+    
+    func addListener(imgView: UIImageView) {
+        let newListener = UITapGestureRecognizer(target: self, action: #selector(self.listenerMethod))
+        imgView.userInteractionEnabled = true
+        imgView.addGestureRecognizer(newListener)
+    }
+    
+    func listenerMethod() {
+        print("listening")
     }
     
     
