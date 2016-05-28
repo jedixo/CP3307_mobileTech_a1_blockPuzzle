@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
     var currentImg: [UInt32] = [0,0,0,0]
     var target: UInt32 = 0
     
+    var test: UInt32 = 0
+    
     /**
      * Main Logic
      */
@@ -72,8 +74,11 @@ class MainViewController: UIViewController {
     /**
      *
      */
-    func listenerMethod() {
-        print("listening")
+    func listenerMethod(sender: AnyObject?) {
+        if (sender?.view == imgViews[0]) {
+            
+        }
+            //view.image = splitImage(UIImage(named: images[Int(theme)][Int(randomIndex)])!, section: i)
     }
     
     /**

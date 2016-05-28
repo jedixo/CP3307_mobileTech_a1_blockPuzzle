@@ -16,7 +16,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e575e70-989d-4ba2-9b5a-eba0b6e5b039" name="Default" comment="" />
+    <list default="true" id="9e575e70-989d-4ba2-9b5a-eba0b6e5b039" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFirstBlockPuzzle/MyFirstBlockPuzzle.xcodeproj/project.xcworkspace/xcuserdata/jakedixon.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/MyFirstBlockPuzzle/MyFirstBlockPuzzle.xcodeproj/project.xcworkspace/xcuserdata/jakedixon.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFirstBlockPuzzle/MyFirstBlockPuzzle.xcodeproj/xcuserdata/jakedixon.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/MyFirstBlockPuzzle/MyFirstBlockPuzzle.xcodeproj/xcuserdata/jakedixon.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFirstBlockPuzzle/MyFirstBlockPuzzle/MainViewController.swift" afterPath="$PROJECT_DIR$/MyFirstBlockPuzzle/MyFirstBlockPuzzle/MainViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+    </list>
     <ignored path="CP3307_mobileTech_a1_blockPuzzle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,14 +50,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3539823">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageViewController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.17511521">
+              <caret line="90" column="35" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1692,6 +1709,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/PictureWorker.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/DatabaseAccess.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java" />
       </list>
     </option>
   </component>
@@ -1724,10 +1742,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1745,10 +1759,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1760,26 +1770,20 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CP3307_mobileTech_a1_blockPuzzle" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+              <option name="myItemId" value="cp3307_a1" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2477,13 +2481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.703704">
@@ -2521,11 +2518,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3539823">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jake_/cp3307_a1/ImageViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17511521">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
