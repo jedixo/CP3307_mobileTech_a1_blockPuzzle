@@ -11,10 +11,12 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet weak var pipeSwitch: UISwitch!
     @IBOutlet weak var shapeSwitch: UISwitch!
+    //@IBOutlet weak var patternSwitch: UISwitch!
     @IBOutlet weak var patternSwitch: UISwitch!
 
 
     @IBAction func switchChanged(sender: AnyObject) {
+        print("out")
         if (sender as! NSObject == pipeSwitch && sender.on) {
             shapeSwitch.on = false;
             patternSwitch.on = false;

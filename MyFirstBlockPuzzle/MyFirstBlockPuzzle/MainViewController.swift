@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
         for (i, view) in imgViews.enumerate() {
             let index = i + 0 as integer_t
             view.image = splitImage(UIImage(named: "pipe1")!, section: index)
+            addListener(view)
         }
         
         //imgViews[0].image = splitImage(UIImage(named: "pipe2")!, section: 0)
