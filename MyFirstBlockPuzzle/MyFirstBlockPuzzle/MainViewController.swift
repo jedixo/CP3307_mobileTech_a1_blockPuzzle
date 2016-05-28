@@ -9,12 +9,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-   // @IBOutlet weak var topLeft: UIImageView!
-   // @IBOutlet weak var topRight: UIImageView!
-   // @IBOutlet weak var bottomRight: UIImageView!
-   // @IBOutlet weak var bottomLeft: UIImageView!
-    
-   // @IBOutlet var imgviews = [UIImageView]()
     @IBOutlet var imgViews: [UIImageView]!
     
     var images: [[String]] = [["pipe1", "pipe2", "pipe3", "pipe4", "pipe5", "pipe6"], ["shape1","shape2","shape3","shape4","shape5"],
@@ -25,37 +19,12 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
         print(images)
         print(imgViews)
-        //for (index, value) in shoppingList.enumerate()
+
         for (i, view) in imgViews.enumerate() {
             let index = i + 0 as integer_t
             view.image = splitImage(UIImage(named: "pipe1")!, section: index)
             addListener(view)
         }
-        
-        //imgViews[0].image = splitImage(UIImage(named: "pipe2")!, section: 0)
-        
-        /**
-        //testimg images
-        //topLeft.image = splitImage(UIImage(named: "pipe1")!, section: 0)
-        //topLeft.clipsToBounds = true
-        //topLeft.contentMode = .ScaleAspectFit
-        //topRight.image = splitImage(UIImage(named: "pipe1")!, section: 1)
-        //topRight.clipsToBounds = true
-        topRight.contentMode = .ScaleAspectFit
-        bottomLeft.image = splitImage(UIImage(named: "pipe1")!, section: 2)
-        bottomLeft.clipsToBounds = true
-        bottomLeft.contentMode = .ScaleAspectFit
-        bottomRight.image = splitImage(UIImage(named: "pipe1")!, section: 3)
-        bottomRight.clipsToBounds = true
-        bottomRight.contentMode = .ScaleAspectFit
-        // Do any additional setup after loading the view.
-        
-        
-        addListener(topLeft)
-        addListener(topRight)
-        addListener(bottomLeft)
-        addListener(bottomRight)*/
-        
     }
     
     
@@ -72,22 +41,6 @@ class MainViewController: UIViewController {
     
     
     @IBAction func randomButton(sender: AnyObject) {
-    }
-    
-    func scaleImage(imgName: String) -> UIImage {
-        let image = UIImage(named: imgName)
-        
-        let size = CGSizeApplyAffineTransform(image!.size, CGAffineTransformMakeScale(0.5, 0.5))
-        let hasAlpha = false
-        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
-        
-        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-        image!.drawInRect(CGRect(origin: CGPointZero, size: size))
-        
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return scaledImage
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,30 +80,4 @@ class MainViewController: UIViewController {
         
         return UIImage(CGImage:left!)
     }
-    
-    
-    
-    
-    
-    
-//     (void)splitImage:(UIImage *)image
-//    {
-//    CGFloat imgWidth = image.size.width/2;
-//    CGFloat imgheight = image.size.height;
-    
-//    CGRect leftImgFrame = CGRectMake(0, 0, imgWidth, imgheight);
-//    CGRect rightImgFrame = CGRectMake(imgWidth, 0, imgWidth, imgheight);
-    
-//    CGImageRef left = CGImageCreateWithImageInRect(image.CGImage, leftImgFrame);
-//    CGImageRef right = CGImageCreateWithImageInRect(image.CGImage, rightImgFrame);
-    
-    // These are the images we want!
-//    UIImage *leftImage = [UIImage imageWithCGImage:left];
-//    UIImage *rightImage = [UIImage imageWithCGImage:right];
-    
-    // Don't forget to free the memory!
-//    CGImageRelease(left);
-//    CGImageRelease(right);
-//    }
-
 }
