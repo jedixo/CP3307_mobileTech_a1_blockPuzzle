@@ -61,6 +61,16 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+     * splitImage function - splits an initial image into quarters
+     * 
+     * solution from (http://stackoverflow.com/questions/10661291/split-uiimage-in-half)
+     * conveted from Obj-c to swift by Jake Dixon (mes)
+     *
+     * @param img - the original image
+     * @param section - the quarter to be cut to (0, 1, 2, 3) = (TL, TR, BL, BR)
+     * @return UIImage - the cut image
+     */
     func splitImage(img: UIImage, section: Int) -> UIImage {
         var imgstartw = 0 as CGFloat
         var imgstarth = 0 as CGFloat
