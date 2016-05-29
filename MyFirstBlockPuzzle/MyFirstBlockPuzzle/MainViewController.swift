@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class MainViewController: UIViewController {
     
@@ -55,6 +56,7 @@ class MainViewController: UIViewController {
      */
     func reset() {
         randButton.enabled = false
+        randButton.backgroundColor = UIColor.whiteColor()
         
         //select target
         target = getRandomIndex(UInt32(images[Int(theme)].count))
@@ -101,6 +103,7 @@ class MainViewController: UIViewController {
             //}
             if (currentImg[0] == target){
                 imgViews[0].image = imgViews[0].image!.tintPhoto(UIColor.greenColor())
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
                 
         } else if (event?.view == imgViews[1]) {
@@ -117,6 +120,7 @@ class MainViewController: UIViewController {
             
             if (currentImg[1] == target){
                imgViews[1].image = imgViews[1].image!.tintPhoto(UIColor.greenColor())
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
 
         } else if (event?.view == imgViews[2]) {
@@ -132,7 +136,8 @@ class MainViewController: UIViewController {
             //}
             
             if (currentImg[2] == target){
-            imgViews[2].image = imgViews[2].image!.tintPhoto(UIColor.greenColor())
+                imgViews[2].image = imgViews[2].image!.tintPhoto(UIColor.greenColor())
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
 
         } else if (event?.view == imgViews[3]) {
@@ -148,6 +153,7 @@ class MainViewController: UIViewController {
             //}
             if (currentImg[3] == target){
                 imgViews[3].image = imgViews[3].image!.tintPhoto(UIColor.greenColor())
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
         }
         
@@ -155,10 +161,13 @@ class MainViewController: UIViewController {
         if (currentImg[0] == currentImg[1] && currentImg[0] == currentImg[2] && currentImg[0] == currentImg[3] && currentImg[0] == target) {
             randButton.enabled = true
             randButton.backgroundColor = UIColor.greenColor()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         } else {
          randButton.enabled = false
+         randButton.backgroundColor = UIColor.whiteColor()
         }
     }
+    
     
     /**
      * splitImage function - splits an initial image into quarters
