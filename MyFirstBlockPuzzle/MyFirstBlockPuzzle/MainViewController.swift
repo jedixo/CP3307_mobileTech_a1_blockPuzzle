@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     var theme: UInt32 = 0
     var currentImg: [UInt32] = [0,0,0,0]
     var target: UInt32 = 0
+    var numberOfTouches = 0
     
     /**
      * Main Logic
@@ -57,6 +58,7 @@ class MainViewController: UIViewController {
     func reset() {
         randButton.enabled = false
         randButton.backgroundColor = UIColor.whiteColor()
+        numberOfTouches = 0
         
         //select target
         target = getRandomIndex(UInt32(images[Int(theme)].count))
@@ -89,7 +91,7 @@ class MainViewController: UIViewController {
      * @param event - the event that is created when a view is pressed
      */
     func nextImg(event: AnyObject?) {
-        
+        numberOfTouches += 1
         if (event?.view == imgViews[0]) {
                 let view = imgViews[0]
                 currentImg[0] += 1
