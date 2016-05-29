@@ -153,6 +153,9 @@ class MainViewController: UIViewController {
         
         //check if game is won here
         if (currentImg[0] == currentImg[1] && currentImg[0] == currentImg[2] && currentImg[0] == currentImg[3] && currentImg[0] == target) {
+            for (_, view) in imgViews.enumerate() {
+                view.userInteractionEnabled = false
+            }
             randButton.enabled = true
             randButton.backgroundColor = UIColor.greenColor()
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
