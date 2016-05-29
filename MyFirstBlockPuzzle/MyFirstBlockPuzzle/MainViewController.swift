@@ -89,7 +89,7 @@ class MainViewController: UIViewController {
     func nextImg(event: AnyObject?) {
         
         if (event?.view == imgViews[0]) {
-            if (currentImg[0] != target) {
+            //if (currentImg[0] != target) {
                 let view = imgViews[0]
                 currentImg[0] += 1
             
@@ -98,15 +98,13 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[0])])!, section: 0)
-            } else {
-               // theImageView.image = theImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-                //theImageView.tintColor = UIColor.redColor()
-                imgViews[0].image = imgViews[0].image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-                imgViews[0].tintColor = UIColor.redColor()
+            //}
+            if (currentImg[0] == target){
+                imgViews[0].image = imgViews[0].image!.tintPhoto(UIColor.greenColor())
             }
                 
         } else if (event?.view == imgViews[1]) {
-            if (currentImg[1] != target) {
+            //if (currentImg[1] != target) {
                 let view = imgViews[1]
                 currentImg[1] += 1
             
@@ -115,12 +113,14 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[1])])!, section: 1)
-            } else {
-                event?.view.userInteractionEnabled = false
+            //}
+            
+            if (currentImg[1] == target){
+               imgViews[1].image = imgViews[1].image!.tintPhoto(UIColor.greenColor())
             }
 
         } else if (event?.view == imgViews[2]) {
-            if (currentImg[2] != target) {
+            //if (currentImg[2] != target) {
                 let view = imgViews[2]
                 currentImg[2] += 1
             
@@ -129,12 +129,14 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[2])])!, section: 2)
-            } else {
-                event?.view.userInteractionEnabled = false
+            //}
+            
+            if (currentImg[2] == target){
+            imgViews[2].image = imgViews[2].image!.tintPhoto(UIColor.greenColor())
             }
 
         } else if (event?.view == imgViews[3]) {
-            if (currentImg[3] != target) {
+            //if (currentImg[3] != target) {
                 let view = imgViews[3]
                 currentImg[3] += 1
             
@@ -143,14 +145,18 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[3])])!, section: 3)
-            } else {
-                event?.view.userInteractionEnabled = false
+            //}
+            if (currentImg[3] == target){
+                imgViews[3].image = imgViews[3].image!.tintPhoto(UIColor.greenColor())
             }
         }
+        
         //check if game is won here
-        if (imgViews[0].userInteractionEnabled == false && imgViews[1].userInteractionEnabled == false && imgViews[1].userInteractionEnabled == false
-            && imgViews[3].userInteractionEnabled == false ) {
+        if (currentImg[0] == currentImg[1] && currentImg[0] == currentImg[2] && currentImg[0] == currentImg[3] && currentImg[0] == target) {
             randButton.enabled = true
+            randButton.backgroundColor = UIColor.greenColor()
+        } else {
+         randButton.enabled = false
         }
     }
     
@@ -215,30 +221,5 @@ class MainViewController: UIViewController {
      */
     @IBAction func randomButton(sender: AnyObject) {
         reset()
-    }
-    
-    
-    
-    public func tintPhoto(tintColor: UIColor) -> UIImage {
-        
-        return modifiedImage { context, rect in
-            // draw black background - workaround to preserve color of partially transparent pixels
-            CGContextSetBlendMode(context, .Normal)
-            UIColor.blackColor().setFill()
-            CGContextFillRect(context, rect)
-            
-            // draw original image
-            CGContextSetBlendMode(context, .Normal)
-            CGContextDrawImage(context, rect, self.CGImage)
-            
-            // tint image (loosing alpha) - the luminosity of the original image is preserved
-            CGContextSetBlendMode(context, .Color)
-            tintColor.setFill()
-            CGContextFillRect(context, rect)
-            
-            // mask by alpha values of original image
-            CGContextSetBlendMode(context, .DestinationIn)
-            CGContextDrawImage(context, rect, self.CGImage)
-        }
-    }
+    } 
 }

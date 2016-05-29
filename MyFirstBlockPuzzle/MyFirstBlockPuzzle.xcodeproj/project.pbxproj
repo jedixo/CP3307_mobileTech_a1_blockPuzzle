@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB23ABD61CF689C5002CC4E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */; };
 		BB23ABD81CF68A30002CC4E0 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */; };
+		BBA95E191CFAECE600D3A21F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95E181CFAECE600D3A21F /* UIImage.swift */; };
 		BBC49A541CF1F2120075BE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A531CF1F2120075BE71 /* AppDelegate.swift */; };
 		BBC49A561CF1F2120075BE71 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC49A551CF1F2120075BE71 /* SettingsViewController.swift */; };
 		BBC49A591CF1F2120075BE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC49A571CF1F2120075BE71 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		BBA95E181CFAECE600D3A21F /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		BBC49A501CF1F2120075BE71 /* MyFirstBlockPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstBlockPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC49A531CF1F2120075BE71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBC49A551CF1F2120075BE71 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				BBC49A571CF1F2120075BE71 /* Main.storyboard */,
 				BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */,
 				BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */,
+				BBA95E181CFAECE600D3A21F /* UIImage.swift */,
 				BBC49A5D1CF1F2120075BE71 /* Assets.xcassets */,
 				BBC49A5F1CF1F2120075BE71 /* LaunchScreen.storyboard */,
 				BBC49A621CF1F2120075BE71 /* Info.plist */,
@@ -336,6 +339,7 @@
 				BBC49A5C1CF1F2120075BE71 /* MyFirstBlockPuzzle.xcdatamodeld in Sources */,
 				BB23ABD81CF68A30002CC4E0 /* StatisticsViewController.swift in Sources */,
 				BBC49A561CF1F2120075BE71 /* SettingsViewController.swift in Sources */,
+				BBA95E191CFAECE600D3A21F /* UIImage.swift in Sources */,
 				BBC49A541CF1F2120075BE71 /* AppDelegate.swift in Sources */,
 				BB23ABD61CF689C5002CC4E0 /* MainViewController.swift in Sources */,
 			);

@@ -149,8 +149,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adR-lK-Ayu">
-                                <rect key="frame" x="277" y="550" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="0.0" y="550" width="600" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="randomButton:" destination="ovx-pi-oc0" eventType="touchUpInside" id="e2x-2q-buc"/>
                                 </connections>
@@ -178,16 +180,18 @@
                             <constraint firstItem="WuG-ai-g4b" firstAttribute="leading" secondItem="r89-2l-zeg" secondAttribute="leading" id="CIa-Mk-PgC"/>
                             <constraint firstItem="L3J-hJ-Lt3" firstAttribute="trailing" secondItem="WuG-ai-g4b" secondAttribute="trailing" id="DIr-s6-adN"/>
                             <constraint firstItem="L3J-hJ-Lt3" firstAttribute="bottom" secondItem="w6S-gm-Pnb" secondAttribute="bottom" id="GKX-M6-f6z"/>
+                            <constraint firstItem="adR-lK-Ayu" firstAttribute="top" secondItem="w6S-gm-Pnb" secondAttribute="bottom" constant="7" id="H0h-7J-x8M"/>
                             <constraint firstItem="r89-2l-zeg" firstAttribute="top" secondItem="al5-MO-g2C" secondAttribute="bottom" id="HRD-Q9-euF"/>
-                            <constraint firstItem="adR-lK-Ayu" firstAttribute="centerX" secondItem="r89-2l-zeg" secondAttribute="centerX" id="JIp-BJ-2G7"/>
                             <constraint firstItem="vTb-6a-qKj" firstAttribute="top" secondItem="WuG-ai-g4b" secondAttribute="top" id="KGS-O3-rnA"/>
                             <constraint firstItem="L3J-hJ-Lt3" firstAttribute="leading" secondItem="WuG-ai-g4b" secondAttribute="leading" id="UWR-R8-pMX"/>
+                            <constraint firstItem="adR-lK-Ayu" firstAttribute="trailing" secondItem="vTb-6a-qKj" secondAttribute="trailing" id="Xzo-Wf-8Tc"/>
                             <constraint firstItem="vTb-6a-qKj" firstAttribute="top" secondItem="r89-2l-zeg" secondAttribute="bottom" id="d2j-vj-kpf"/>
                             <constraint firstItem="r89-2l-zeg" firstAttribute="leading" secondItem="HSk-ZG-RQy" secondAttribute="leading" id="eG9-07-Z1C"/>
                             <constraint firstItem="vTb-6a-qKj" firstAttribute="trailing" secondItem="r89-2l-zeg" secondAttribute="trailing" id="f4q-y8-LQZ"/>
-                            <constraint firstAttribute="bottom" secondItem="adR-lK-Ayu" secondAttribute="bottom" constant="20" symbolic="YES" id="fIQ-wz-x5V"/>
-                            <constraint firstItem="adR-lK-Ayu" firstAttribute="top" secondItem="L3J-hJ-Lt3" secondAttribute="bottom" constant="7" id="hZy-5A-1Eo"/>
                             <constraint firstItem="w6S-gm-Pnb" firstAttribute="trailing" secondItem="vTb-6a-qKj" secondAttribute="trailing" id="mp8-Kj-fE8"/>
+                            <constraint firstItem="adR-lK-Ayu" firstAttribute="leading" secondItem="L3J-hJ-Lt3" secondAttribute="leading" id="wSg-La-LMy"/>
+                            <constraint firstItem="adR-lK-Ayu" firstAttribute="trailing" secondItem="w6S-gm-Pnb" secondAttribute="trailing" id="waO-ad-CIf"/>
+                            <constraint firstAttribute="bottom" secondItem="adR-lK-Ayu" secondAttribute="bottom" constant="20" symbolic="YES" id="y3a-PU-Awk"/>
                             <constraint firstItem="L3J-hJ-Lt3" firstAttribute="top" secondItem="w6S-gm-Pnb" secondAttribute="top" id="ydJ-T8-SwQ"/>
                         </constraints>
                     </view>
