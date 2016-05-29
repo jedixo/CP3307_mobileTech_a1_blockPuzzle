@@ -91,7 +91,6 @@ class MainViewController: UIViewController {
     func nextImg(event: AnyObject?) {
         
         if (event?.view == imgViews[0]) {
-            //if (currentImg[0] != target) {
                 let view = imgViews[0]
                 currentImg[0] += 1
             
@@ -100,14 +99,13 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[0])])!, section: 0)
-            //}
+            
             if (currentImg[0] == target){
                 imgViews[0].image = imgViews[0].image!.tintPhoto(UIColor.greenColor())
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
                 
         } else if (event?.view == imgViews[1]) {
-            //if (currentImg[1] != target) {
                 let view = imgViews[1]
                 currentImg[1] += 1
             
@@ -116,7 +114,6 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[1])])!, section: 1)
-            //}
             
             if (currentImg[1] == target){
                imgViews[1].image = imgViews[1].image!.tintPhoto(UIColor.greenColor())
@@ -124,7 +121,6 @@ class MainViewController: UIViewController {
             }
 
         } else if (event?.view == imgViews[2]) {
-            //if (currentImg[2] != target) {
                 let view = imgViews[2]
                 currentImg[2] += 1
             
@@ -133,7 +129,6 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[2])])!, section: 2)
-            //}
             
             if (currentImg[2] == target){
                 imgViews[2].image = imgViews[2].image!.tintPhoto(UIColor.greenColor())
@@ -141,7 +136,6 @@ class MainViewController: UIViewController {
             }
 
         } else if (event?.view == imgViews[3]) {
-            //if (currentImg[3] != target) {
                 let view = imgViews[3]
                 currentImg[3] += 1
             
@@ -150,7 +144,7 @@ class MainViewController: UIViewController {
                 }
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[3])])!, section: 3)
-            //}
+            
             if (currentImg[3] == target){
                 imgViews[3].image = imgViews[3].image!.tintPhoto(UIColor.greenColor())
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
@@ -162,6 +156,7 @@ class MainViewController: UIViewController {
             randButton.enabled = true
             randButton.backgroundColor = UIColor.greenColor()
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
         } else {
          randButton.enabled = false
          randButton.backgroundColor = UIColor.whiteColor()
@@ -188,14 +183,17 @@ class MainViewController: UIViewController {
         if (section == 0) {
             imgWidth = img.size.width / 2
             imgHeight = img.size.height / 2
+            
         } else if (section == 1) {
             imgstartw = img.size.width / 2
             imgWidth = img.size.width
             imgHeight = img.size.height / 2
+            
         } else if (section == 2) {
             imgstarth = img.size.height / 2
             imgWidth = img.size.width / 2
             imgHeight = img.size.height
+            
         } else {
             imgstartw = img.size.width / 2
             imgstarth = img.size.height / 2
