@@ -99,7 +99,10 @@ class MainViewController: UIViewController {
             
                 view.image = splitImage(UIImage(named: images[Int(theme)][Int(currentImg[0])])!, section: 0)
             } else {
-                event?.view.userInteractionEnabled = false
+               // theImageView.image = theImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+                //theImageView.tintColor = UIColor.redColor()
+                imgViews[0].image = imgViews[0].image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+                imgViews[0].tintColor = UIColor.redColor()
             }
                 
         } else if (event?.view == imgViews[1]) {
@@ -212,5 +215,30 @@ class MainViewController: UIViewController {
      */
     @IBAction func randomButton(sender: AnyObject) {
         reset()
+    }
+    
+    
+    
+    public func tintPhoto(tintColor: UIColor) -> UIImage {
+        
+        return modifiedImage { context, rect in
+            // draw black background - workaround to preserve color of partially transparent pixels
+            CGContextSetBlendMode(context, .Normal)
+            UIColor.blackColor().setFill()
+            CGContextFillRect(context, rect)
+            
+            // draw original image
+            CGContextSetBlendMode(context, .Normal)
+            CGContextDrawImage(context, rect, self.CGImage)
+            
+            // tint image (loosing alpha) - the luminosity of the original image is preserved
+            CGContextSetBlendMode(context, .Color)
+            tintColor.setFill()
+            CGContextFillRect(context, rect)
+            
+            // mask by alpha values of original image
+            CGContextSetBlendMode(context, .DestinationIn)
+            CGContextDrawImage(context, rect, self.CGImage)
+        }
     }
 }
