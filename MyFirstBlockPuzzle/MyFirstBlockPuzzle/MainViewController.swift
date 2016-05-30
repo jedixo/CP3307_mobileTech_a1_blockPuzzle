@@ -34,19 +34,6 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate {
         
         //sets up the game
         reset()
-        
-        
-        //coredata stuff
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let context = appDelegate.managedObjectContext
-        
-        let entry = NSEntityDescription.insertNewObjectForEntityForName("Puzzle", inManagedObjectContext: context) as! Puzzle
-        
-        entry.id = NSDate()
-        entry.theme = "pipes"
-        entry.touches = 0
-
     }
     
     /**
@@ -177,6 +164,24 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate {
             randButton.enabled = true
             randButton.backgroundColor = UIColor.greenColor()
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            
+            //databse inseting
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            let context = appDelegate.managedObjectContext
+            
+            let entry = NSEntityDescription.insertNewObjectForEntityForName("Puzzle", inManagedObjectContext: context) as! Puzzle
+            
+            entry.id = NSDate()
+            if (theme == 0) {
+                entry.theme = "pipes"
+            } else if (theme == 1) {
+                entry.theme = "shapes"
+            } else {
+                entry.theme = "patterns"
+            }
+            entry.touches = numberOfTouches
             
         } else {
          randButton.enabled = false
