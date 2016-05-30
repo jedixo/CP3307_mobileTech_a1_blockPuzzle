@@ -14,6 +14,7 @@ import CoreData
 
 extension Puzzle {
 
+    @NSManaged var id: NSDate?
     @NSManaged var theme: String?
     @NSManaged var touches: NSNumber?
 
