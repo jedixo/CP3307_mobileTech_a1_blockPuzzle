@@ -166,7 +166,7 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             
-            //databse inseting
+            //databse inseting.. this works as far as i known
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             
             let context = appDelegate.managedObjectContext
