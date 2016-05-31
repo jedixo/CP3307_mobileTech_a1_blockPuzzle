@@ -97,8 +97,6 @@ class SettingsViewController: UIViewController {
         let bgimgview = UIImageView(frame: self.view.frame)
 
         bgimgview.image = bgimg
-        bgimgview.image? = (bgimgview.image?.imageWithRenderingMode(.AlwaysTemplate))!
-        bgimgview.tintColor = UIColor.orangeColor().colorWithAlphaComponent(0.2)
         
         if (self.view.subviews[0] is UIImageView) {
             self.view.subviews[0].removeFromSuperview()

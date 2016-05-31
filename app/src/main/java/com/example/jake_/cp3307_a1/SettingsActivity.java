@@ -15,6 +15,9 @@ public class SettingsActivity extends AppCompatActivity {
 
     private RadioGroup radioThemeGroup;
 
+    private int[] images = {R.drawable.eg1, R.drawable.eg2, R.drawable.eg3};
+    private String theme = "pipes";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,8 @@ public class SettingsActivity extends AppCompatActivity {
         ImageViewController.clearBitmaps();
 
         radioThemeGroup = (RadioGroup) findViewById(R.id.radioTheme);
+
+        changeBgImage(0);
     }
 
     /**
@@ -33,13 +38,43 @@ public class SettingsActivity extends AppCompatActivity {
      * @param view - the view
      */
     public void DonePressed(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("theme", theme);
+        startActivity(intent);
+    }
+
+    /**
+     * radio button listener
+     * sets the background and the theme variable
+     *
+     * @param view - the view
+     */
+    public void radButtonPressed(View view) {
         int selectedID = radioThemeGroup.getCheckedRadioButtonId();
         RadioButton radioThemeButton = (RadioButton) findViewById(selectedID);
 
         if (radioThemeButton != null) {
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.putExtra("theme", radioThemeButton.getText());
-            startActivity(intent);
+
+            if (radioThemeButton.getText().equals(theme = "pipes")) {
+                changeBgImage(0);
+
+            } else if (radioThemeButton.getText().equals(theme = "shapes")) {
+                changeBgImage(1);
+
+            } else {
+                theme = "patterns";
+                changeBgImage(2);
+            }
         }
+    }
+
+    /**
+     * changeBgImage - changes the activity background image
+     *
+     * @param image - the resource for the image
+     */
+    private void changeBgImage(int image) {
+        View view = this.getWindow().getDecorView();
+        view.setBackgroundResource(images[image]);
     }
 }

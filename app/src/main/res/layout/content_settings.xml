@@ -34,19 +34,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="pipes"
-            android:checked="true" />
+            android:checked="true"
+            android:onClick="radButtonPressed" />
 
         <RadioButton
             android:id="@+id/radioShapes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="shapes" />
+            android:text="shapes"
+            android:onClick="radButtonPressed" />
 
         <RadioButton
             android:id="@+id/radioPatterns"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="patterns" />
+            android:text="patterns"
+            android:onClick="radButtonPressed" />
 
     </RadioGroup>
 
