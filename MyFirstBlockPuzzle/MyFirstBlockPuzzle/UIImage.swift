@@ -8,6 +8,7 @@
 
 import UIKit
 public extension UIImage {
+    
     /**
      Tint, Colorize image with given tint color<br><br>
      This is similar to Photoshop's "Color" layer blend mode<br><br>
@@ -46,6 +47,7 @@ public extension UIImage {
             CGContextDrawImage(context, rect, self.CGImage)
         }
     }
+    
     /**
      Tint Picto to color
      
@@ -66,6 +68,7 @@ public extension UIImage {
             CGContextDrawImage(context, rect, self.CGImage)
         }
     }
+    
     /**
      Modified Image Context, apply modification on image
      
