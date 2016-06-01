@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1BF3C01CFE6F59006AC98B /* tada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB1BF3BF1CFE6F59006AC98B /* tada.mp3 */; };
 		BB23ABD61CF689C5002CC4E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */; };
 		BB23ABD81CF68A30002CC4E0 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */; };
 		BBA23D1A1CFD88BE00F687F8 /* eg1.png in Resources */ = {isa = PBXBuildFile; fileRef = BBA23D171CFD88BE00F687F8 /* eg1.png */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1BF3BF1CFE6F59006AC98B /* tada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tada.mp3; path = ../../app/src/main/res/raw/tada.mp3; sourceTree = "<group>"; };
 		BB23ABD51CF689C5002CC4E0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BB23ABD71CF68A30002CC4E0 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		BBA23D171CFD88BE00F687F8 /* eg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eg1.png; path = ../../app/src/main/res/drawable/eg1.png; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				BBA23D171CFD88BE00F687F8 /* eg1.png */,
 				BBA23D181CFD88BE00F687F8 /* eg2.png */,
 				BBA23D191CFD88BE00F687F8 /* eg3.png */,
+				BB1BF3BF1CFE6F59006AC98B /* tada.mp3 */,
 				BBEC41CA1CF814A300CFB443 /* pipe6.png */,
 				BBEC41CB1CF814A300CFB443 /* shape1.png */,
 				BBEC41CC1CF814A300CFB443 /* shape2.png */,
@@ -315,6 +318,7 @@
 				BBEC41D11CF814A300CFB443 /* patterns2.png in Resources */,
 				BBA23D1A1CFD88BE00F687F8 /* eg1.png in Resources */,
 				BBEC41D81CF814A300CFB443 /* pipe3.png in Resources */,
+				BB1BF3C01CFE6F59006AC98B /* tada.mp3 in Resources */,
 				BBEC41D21CF814A300CFB443 /* patterns3.png in Resources */,
 				BBEC41DD1CF814A300CFB443 /* shape2.png in Resources */,
 				BBEC41DA1CF814A300CFB443 /* pipe5.png in Resources */,

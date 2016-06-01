@@ -9,10 +9,14 @@
 import UIKit
 import AudioToolbox
 import CoreData
+import AVFoundation
 
 class MainViewController: UIViewController, NSFetchedResultsControllerDelegate {
     //cd
     var managedObjectContext: NSManagedObjectContext? = nil
+    
+    var tadaSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("tada", ofType: "mp3")!)
+    var audioPlayer = AVAudioPlayer()
     
     //objects
     @IBOutlet weak var randButton: UIButton!
@@ -31,7 +35,13 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
+        do {
+        try audioPlayer = AVAudioPlayer(contentsOfURL: tadaSound, fileTypeHint: nil)
+        audioPlayer.prepareToPlay()
+        } catch _ {
+            
+        }
         //sets up the game
         reset()
     }
@@ -182,6 +192,8 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate {
                 entry.theme = "patterns"
             }
             entry.touches = numberOfTouches
+            
+            audioPlayer.play()
             
         } else {
          randButton.enabled = false
