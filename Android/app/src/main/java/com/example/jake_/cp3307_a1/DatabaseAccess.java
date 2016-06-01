@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseAccess extends SQLiteOpenHelper {
 
-    private static int VERSION = 6;
+    private static int VERSION = 7;
     private static String TABLENAME = "performance";
     private static String DATABASE = "performanceData";
 
@@ -41,7 +41,7 @@ public class DatabaseAccess extends SQLiteOpenHelper {
      */
     private void setup(SQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLENAME + ";");
-        db.execSQL("CREATE TABLE " + TABLENAME + " (_id INTEGER PRIMARY KEY, touches INTEGER);");
+        db.execSQL("CREATE TABLE " + TABLENAME + " (_id INTEGER PRIMARY KEY, touches INTEGER, theme TEXT);");
     }
 
     /**
@@ -59,10 +59,11 @@ public class DatabaseAccess extends SQLiteOpenHelper {
      * @param touches - number of touches to record
      * @return - returns if the operation succeeded or not
      */
-    public boolean addNewEntry(int touches) {
+    public boolean addNewEntry(String theme, int touches) {
         try {
             ContentValues values = new ContentValues();
             values.put("touches", touches);
+            values.put("theme", theme);
             getReadableDatabase().insert(TABLENAME, null, values);
             return true;
         } catch (Exception e) {

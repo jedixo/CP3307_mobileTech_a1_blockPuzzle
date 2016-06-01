@@ -29,7 +29,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
         Cursor cursor = database.getAllCursor();
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.item_view, cursor,
-                new String[]{"_id", "touches"}, new int[]{R.id.id, R.id.touches}, 0);
+                new String[]{"theme", "touches"}, new int[]{R.id.id, R.id.touches}, 0);
 
         if (listView != null && totalComplete != null && numberTouches != null && avgTouches != null) {
             listView.setAdapter(adapter);

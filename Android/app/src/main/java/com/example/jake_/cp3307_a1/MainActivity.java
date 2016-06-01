@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     //other variables
     private int touches = 0;
+    private String theme = "pipes";
 
     /**
      * initiator
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         //gets the theme and tells picture worker to load images from that theme
         Bundle settingsData = getIntent().getExtras();
         if (settingsData != null) {
-            String theme = settingsData.getString("theme");
+            theme = settingsData.getString("theme");
 
             if (theme != null) {
                 int length;
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             soundSystem.play();
             Toast.makeText(this, "You Won!", Toast.LENGTH_SHORT).show();
             randomButton.setEnabled(true);
-            database.addNewEntry(touches);
+            database.addNewEntry(theme,touches);
         }
 
     }

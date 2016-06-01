@@ -8,8 +8,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="id: "
-        android:id="@+id/label1" />
+        android:text="Theme: "
+        android:id="@+id/label1"
+        android:textSize="14dp" />
 
     <TextView
         android:layout_width="31dp"
@@ -17,14 +18,16 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
         android:id="@+id/id"
-        android:layout_weight="0.39" />
+        android:layout_weight="0.39"
+        android:textSize="17dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="touches: "
-        android:id="@+id/label2" />
+        android:text="Touches: "
+        android:id="@+id/label2"
+        android:textSize="14dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,6 +35,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
         android:id="@+id/touches"
-        android:layout_weight="0.39" />
+        android:layout_weight="0.33"
+        android:textSize="17dp" />
 
 </LinearLayout>
