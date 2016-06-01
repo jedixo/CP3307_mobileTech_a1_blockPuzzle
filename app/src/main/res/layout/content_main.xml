@@ -75,7 +75,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Randomize"
+            android:text="Play Again"
             android:onClick="Randomize"
             android:id="@+id/randomButton"
             android:layout_weight="1" />

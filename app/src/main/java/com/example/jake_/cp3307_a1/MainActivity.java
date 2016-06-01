@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * mainActivity controller class
@@ -151,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (ImageViewController.isComplete()) {
             soundSystem.play();
+            Toast.makeText(this, "You Won!", Toast.LENGTH_SHORT).show();
             randomButton.setEnabled(true);
             database.addNewEntry(touches);
         }
