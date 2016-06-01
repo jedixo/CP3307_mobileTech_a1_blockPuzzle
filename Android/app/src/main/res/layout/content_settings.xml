@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jake_.cp3307_a1.SettingsActivity"
+    tools:showIn="@layout/activity_settings">
+
+    <RadioGroup
+        android:id="@+id/radioTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Done"
+        android:layout_alignEnd="@+id/Done"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Theme selection:"
+            android:id="@+id/textView" />
+
+        <RadioButton
+            android:id="@+id/radioPipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pipes"
+            android:checked="true"
+            android:onClick="radButtonPressed" />
+
+        <RadioButton
+            android:id="@+id/radioShapes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="shapes"
+            android:onClick="radButtonPressed" />
+
+        <RadioButton
+            android:id="@+id/radioPatterns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="patterns"
+            android:onClick="radButtonPressed" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:id="@+id/Done"
+        android:onClick="DonePressed"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="416b81aaddec2452a25be6c57c81aefac9acf811">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_a56a3b1f937cbc1b9d7cf5a1f12c83d6d52c468b.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_aa9f60f7133e0de63659b1864f12dafc5f3a4237.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="bed8fea17ecdeddcc919478b6ef929e4af9e23c2">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/instant-run_312b03b5c98c74b075f428e1fcfd89235288c10c.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_154f3c7c6afd5fa22a90a65f71aa7a7373927bfe.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_7c5b0781343c36676ec5236e2af2f9d1ee0cad96.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_ba966eb477cb6eeb9d3fc608eb7a61c46c73f54a.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_cd2ab0803d436f4cc59eeab2d7a23f323501720d.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.3.0_5fb1045bb4910d0ef32a74566f1470e1f7c42b0a.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.3.0_db109dc3215b316cc40ac9d54cb8978a37792094.jar" />
+    </item>
+    <item
+        jar="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/jakedixon/CP3307_mobileTech_a1_blockPuzzle/Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_7edb3ba55d8b1abbd141bc29c885864e274d70a6.jar" />
+    </item>
+
+</items>
